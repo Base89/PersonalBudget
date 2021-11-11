@@ -1,0 +1,6 @@
+#ifndef EXPENSE_H_INCLUDED
+#define EXPENSE_H_INCLUDED
+
+
+
+#endif // EXPENSE_H_INCLUDED

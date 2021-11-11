@@ -1,0 +1,6 @@
+#ifndef TEXTFILE_H_INCLUDED
+#define TEXTFILE_H_INCLUDED
+
+
+
+#endif // TEXTFILE_H_INCLUDED
