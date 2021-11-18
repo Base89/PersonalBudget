@@ -33,7 +33,22 @@ User FileWithUsers::getUserData(CMarkup xml)
 
 void FileWithUsers::addUserToFile(User user)
 {
+    CMarkup xml;
 
+    xml = loadFile(getFileName());
+
+    xml.FindElem();
+    xml.IntoElem();
+    xml.AddElem("User");
+    xml.IntoElem();
+    xml.AddElem("UserId", user.getId());
+    xml.AddElem("Login", user.getLogin());
+    xml.AddElem("Password", user.getPassword());
+    xml.AddElem("Name", user.getName());
+    xml.AddElem("Surname", user.getSurname());
+
+    xml.OutOfElem();
+    xml.Save(getFileName() + ".xml");
 }
 
 vector <User> FileWithUsers::loadUsersFromFile()
