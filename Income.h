@@ -1,6 +1,20 @@
-#ifndef INCOME_H_INCLUDED
-#define INCOME_H_INCLUDED
+#ifndef INCOME_H
+#define INCOME_H
 
+#include <iostream>
 
+#include "Finance.h"
 
-#endif // INCOME_H_INCLUDED
+using namespace std;
+
+class Income : public Finance
+{
+    int incomeId;
+
+public:
+    int getIncomeId();
+
+    void setIncomeId(int newIncomeId);
+};
+
+#endif

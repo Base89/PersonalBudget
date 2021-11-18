@@ -83,7 +83,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>768</x>
+      <x>808</x>
       <y>40</y>
       <w>216</w>
       <h>184</h>
@@ -108,10 +108,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1024</x>
+      <x>1064</x>
       <y>264</y>
       <w>216</w>
-      <h>112</h>
+      <h>104</h>
     </coordinates>
     <panel_attributes>TextFile
 --
@@ -120,7 +120,6 @@
 --
 + TextFile()
 
-+ isFileEmpty() : Bool
 + getFileName() : String</panel_attributes>
     <additional_attributes/>
   </element>
@@ -170,7 +169,7 @@
     <coordinates>
       <x>512</x>
       <y>568</y>
-      <w>216</w>
+      <w>256</w>
       <h>248</h>
     </coordinates>
     <panel_attributes>IncomeManager
@@ -198,7 +197,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>768</x>
+      <x>808</x>
       <y>568</y>
       <w>216</w>
       <h>96</h>
@@ -207,7 +206,7 @@
 --
 - incomeId : Integer
 - userId : Integer
-- date : String
+- date : Integer
 - item : String
 - amount : Double</panel_attributes>
     <additional_attributes/>
@@ -215,7 +214,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1024</x>
+      <x>1064</x>
       <y>568</y>
       <w>216</w>
       <h>208</h>
@@ -244,7 +243,7 @@
     <coordinates>
       <x>512</x>
       <y>1192</y>
-      <w>216</w>
+      <w>256</w>
       <h>248</h>
     </coordinates>
     <panel_attributes>ExpenseManager
@@ -272,7 +271,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>768</x>
+      <x>808</x>
       <y>1192</y>
       <w>216</w>
       <h>96</h>
@@ -281,7 +280,7 @@
 --
 - expenseId : Integer
 - userId : Integer
-- date : String
+- date : Integer
 - item : String
 - amount : Double</panel_attributes>
     <additional_attributes/>
@@ -289,7 +288,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1024</x>
+      <x>1064</x>
       <y>1192</y>
       <w>216</w>
       <h>208</h>
@@ -318,7 +317,7 @@
     <coordinates>
       <x>512</x>
       <y>856</y>
-      <w>216</w>
+      <w>256</w>
       <h>296</h>
     </coordinates>
     <panel_attributes>DateManager
@@ -350,7 +349,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>768</x>
+      <x>808</x>
       <y>856</y>
       <w>216</w>
       <h>80</h>
@@ -368,7 +367,7 @@
     <coordinates>
       <x>512</x>
       <y>336</y>
-      <w>216</w>
+      <w>256</w>
       <h>128</h>
     </coordinates>
     <panel_attributes>AuxiliaryMethods
@@ -443,27 +442,27 @@ _+ loadInteger() : Integer_</panel_attributes>
     <coordinates>
       <x>696</x>
       <y>816</y>
-      <w>112</w>
+      <w>152</w>
       <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;50.0;10.0;10.0;120.0;10.0;120.0;50.0</additional_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0;170.0;10.0;170.0;50.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>696</x>
+      <x>688</x>
       <y>528</y>
-      <w>112</w>
+      <w>160</w>
       <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;50.0;10.0;10.0;120.0;10.0;120.0;50.0</additional_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0;180.0;10.0;180.0;50.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>720</x>
+      <x>760</x>
       <y>1280</y>
       <w>88</w>
       <h>48</h>
@@ -474,7 +473,7 @@ _+ loadInteger() : Integer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>952</x>
+      <x>992</x>
       <y>528</y>
       <w>112</w>
       <h>56</h>
@@ -485,7 +484,7 @@ _+ loadInteger() : Integer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>952</x>
+      <x>992</x>
       <y>1280</y>
       <w>88</w>
       <h>48</h>
@@ -518,7 +517,7 @@ _+ loadInteger() : Integer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>976</x>
+      <x>1016</x>
       <y>120</y>
       <w>168</w>
       <h>160</h>
@@ -529,24 +528,24 @@ _+ loadInteger() : Integer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1120</x>
-      <y>368</y>
+      <x>1160</x>
+      <y>360</y>
       <w>24</w>
-      <h>216</h>
+      <h>224</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;250.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;260.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1232</x>
+      <x>1272</x>
       <y>288</y>
-      <w>56</w>
+      <w>48</w>
       <h>952</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;50.0;10.0;50.0;1170.0;10.0;1170.0</additional_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0;40.0;1170.0;10.0;1170.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -564,11 +563,11 @@ _+ loadInteger() : Integer_</panel_attributes>
     <coordinates>
       <x>688</x>
       <y>0</y>
-      <w>120</w>
+      <w>160</w>
       <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>130.0;50.0;130.0;10.0;10.0;10.0;10.0;50.0</additional_attributes>
+    <additional_attributes>180.0;50.0;180.0;10.0;10.0;10.0;10.0;50.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -584,13 +583,13 @@ _+ loadInteger() : Integer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>696</x>
+      <x>688</x>
       <y>200</y>
-      <w>88</w>
+      <w>136</w>
       <h>152</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>90.0;10.0;10.0;10.0;10.0;170.0</additional_attributes>
+    <additional_attributes>150.0;10.0;10.0;10.0;10.0;170.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -606,7 +605,7 @@ _+ loadInteger() : Integer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>720</x>
+      <x>760</x>
       <y>384</y>
       <w>368</w>
       <h>200</h>
@@ -617,7 +616,7 @@ _+ loadInteger() : Integer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>720</x>
+      <x>760</x>
       <y>440</y>
       <w>40</w>
       <h>456</h>
@@ -628,7 +627,7 @@ _+ loadInteger() : Integer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>720</x>
+      <x>760</x>
       <y>424</y>
       <w>56</w>
       <h>816</h>
@@ -639,7 +638,7 @@ _+ loadInteger() : Integer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>720</x>
+      <x>760</x>
       <y>400</y>
       <w>320</w>
       <h>840</h>

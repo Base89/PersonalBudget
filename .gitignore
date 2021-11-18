@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+#Plans
+*.mm
+*.uxf

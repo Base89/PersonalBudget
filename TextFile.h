@@ -1,6 +1,24 @@
-#ifndef TEXTFILE_H_INCLUDED
-#define TEXTFILE_H_INCLUDED
+#ifndef TEXTFILE_H
+#define TEXTFILE_H
 
+#include <iostream>
 
+#include "Markup.h"
+#include "AuxiliaryMethods.h"
 
-#endif // TEXTFILE_H_INCLUDED
+using namespace std;
+
+class TextFile
+{
+    const string FILE_NAME;
+    CMarkup xml;
+
+public:
+    TextFile(string fileName) : FILE_NAME(fileName) {}
+
+    void loadFile();
+    string getFileName();
+
+};
+
+#endif

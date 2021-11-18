@@ -1,6 +1,18 @@
-#ifndef EXPENSEMANAGER_H_INCLUDED
-#define EXPENSEMANAGER_H_INCLUDED
+#ifndef EXPENSEMANAGER_H
+#define EXPENSEMANAGER_H
 
+#include <iostream>
+#include <vector>
 
+#include "Expense.h"
+#include "FinanceManager.h"
 
-#endif // EXPENSEMANAGER_H_INCLUDED
+using namespace std;
+
+class ExpenseManager : public FinanceManager
+{
+    vector <Expense> expenses;
+    FileWithExpenses fileWithExpenses;
+};
+
+#endif
