@@ -34,3 +34,7 @@
 #Plans
 *.mm
 *.uxf
+
+bin/
+obj/
+plans/
