@@ -5,7 +5,7 @@
 
 1636638902 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\incomemanager.cpp
 
-1584205420 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\main.cpp
+1637253387 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\main.cpp
 	<iostream>
 
 1636638359 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\personalbudget.cpp
@@ -35,7 +35,7 @@
 1636749890 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\income.cpp
 	"Income.h"
 
-1636787397 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\textfile.cpp
+1637261205 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\textfile.cpp
 	"TextFile.h"
 
 1636696058 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\user.cpp
@@ -62,7 +62,8 @@
 
 1636639637 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithincomes.cpp
 
-1636639596 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithusers.cpp
+1637261299 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithusers.cpp
+	"FileWithUsers.h"
 
 1635522156 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\markup.cpp
 	<stdio.h>
@@ -78,7 +79,7 @@
 	<string>
 	<afx.h>
 
-1636784380 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\textfile.h
+1637261186 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\textfile.h
 	<iostream>
 	"Markup.h"
 	"AuxiliaryMethods.h"
@@ -101,4 +102,11 @@
 1636639302 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\datemanager.h
 
 1636638512 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\budgetmanager.h
+
+1637250456 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithusers.h
+	<iostream>
+	<vector>
+	"User.h"
+	"TextFile.h"
+	"AuxiliaryMethods.h"
 

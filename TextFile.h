@@ -11,12 +11,11 @@ using namespace std;
 class TextFile
 {
     const string FILE_NAME;
-    CMarkup xml;
 
 public:
     TextFile(string fileName) : FILE_NAME(fileName) {}
 
-    void loadFile();
+    CMarkup loadFile(string fileName);
     string getFileName();
 
 };

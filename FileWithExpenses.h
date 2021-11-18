@@ -1,6 +1,18 @@
-#ifndef FILEOFEXPENSE_H_INCLUDED
-#define FILEOFEXPENSE_H_INCLUDED
+#ifndef FILEOFEXPENSE_H
+#define FILEOFEXPENSE_H
 
+#include <iostream>
+#include <vector>
 
+#include "Expense.h"
+#include "TextFile.h"
+#include "AuxiliaryMethods.h"
 
-#endif // FILEOFEXPENSE_H_INCLUDED
+using namespace std;
+
+class FileWithExpense : public TextFile
+{
+
+};
+
+#endif

@@ -1,6 +1,18 @@
-#ifndef FILEOFINCOMES_H_INCLUDED
-#define FILEOFINCOMES_H_INCLUDED
+#ifndef FILEOFINCOMES_H
+#define FILEOFINCOMES_H
 
+#include <iostream>
+#include <vector>
 
+#include "Income.h"
+#include "TextFile.h"
+#include "AuxiliaryMethods.h"
 
-#endif // FILEOFINCOMES_H_INCLUDED
+using namespace std;
+
+class FileWithIncomes : public TextFile
+{
+
+};
+
+#endif
