@@ -60,7 +60,8 @@
 
 1636639782 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithexpenses.cpp
 
-1636639637 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithincomes.cpp
+1637350063 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithincomes.cpp
+	"FileWithIncomes.h"
 
 1637264004 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithusers.cpp
 	"FileWithUsers.h"
@@ -107,6 +108,14 @@
 	<iostream>
 	<vector>
 	"User.h"
+	"TextFile.h"
+	"AuxiliaryMethods.h"
+
+1637350161 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithincomes.h
+	<iostream>
+	<vector>
+	"Income.h"
+	"Date.h"
 	"TextFile.h"
 	"AuxiliaryMethods.h"
 
