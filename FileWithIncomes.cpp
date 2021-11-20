@@ -80,7 +80,7 @@ vector <Income> FileWithIncomes::loadIncomesOfLoggedInUserFromFile(int loggedInU
 {
     CMarkup xml;
     vector <Income> incomes;
-    string strUserId = AuxiliaryMethods::convertIntToString(loggedInUserId);
+    string userId = AuxiliaryMethods::convertIntToString(loggedInUserId);
 
     xml = loadFile(getFileName());
     xml.FindElem();
@@ -89,7 +89,9 @@ vector <Income> FileWithIncomes::loadIncomesOfLoggedInUserFromFile(int loggedInU
     while (xml.FindElem("Income"))
     {
         xml.FindChildElem("UserId");
-        if (xml.GetChildData() == strUserId)
+        MCD_STR strUserId = xml.GetChildData();
+
+        if (strUserId == userId)
         {
             incomes.push_back(getIncomeData(xml));
         }
