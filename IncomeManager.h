@@ -7,11 +7,13 @@
 #include "Income.h"
 #include "FinanceManager.h"
 #include "FileWithIncomes.h"
+#include "AuxiliaryMethods.h"
 
 using namespace std;
 
 class IncomeManager : public FinanceManager
 {
+    const int LOGGED_IN_USER_ID;
     vector <Income> incomes;
     FileWithIncomes fileWithIncomes;
 
@@ -24,7 +26,10 @@ class IncomeManager : public FinanceManager
     vector <Income> searchIncomesBySelectedPeriod(int startingDate, int closingDate);
 
 public:
-    IncomeManager(string fileNameWithIncomes) : fileWithIncomes(fileNameWithIncomes) {}
+    IncomeManager(string fileNameWithIncomes, int loggedInUserId) : fileWithIncomes(fileNameWithIncomes), LOGGED_IN_USER_ID(loggedInUserId)
+    {
+        incomes = fileWithIncomes.loadIncomesOfLoggedInUserFromFile(LOGGED_IN_USER_ID);
+    };
 
     void addIncome();
     void displayIncomeBalance();

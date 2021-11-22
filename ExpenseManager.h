@@ -16,15 +16,15 @@ class ExpenseManager : public FinanceManager
     FileWithExpenses fileWithExpenses;
 
     Expense getNewExpenseData();
-    void sortExpensesFromEldest();
+    vector <Expense> sortExpensesFromEldest(vector <Expense> expenses);
     double sumExpenses();
     void displayExpenses();
     void displayExpensesSum();
     void displayAmountOfExpenses();
-    void searchExpensesBySelectedPeriod();
+    vector <Expense> searchExpensesBySelectedPeriod(int startingDate, int closingDate);
 
 public:
-    ExpenseManager() {}
+    ExpenseManager(string fileNameWithExpenses) : fileWithExpenses(fileNameWithExpenses) {}
 
     void addExpense();
     void displayExpenseBalance();

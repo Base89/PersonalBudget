@@ -64,6 +64,8 @@ void FileWithIncomes::addIncomeToFile(Income income)
 
     xml.OutOfElem();
     xml.Save(getFileName() + ".xml");
+
+    lastIncomeId++;
 }
 
 vector <Income> FileWithIncomes::loadIncomesOfLoggedInUserFromFile(int loggedInUserId)
@@ -86,6 +88,7 @@ vector <Income> FileWithIncomes::loadIncomesOfLoggedInUserFromFile(int loggedInU
             incomes.push_back(getIncomeData(xml));
         }
     }
+    lastIncomeId = getLastIncomeIdFromFile(xml);
     cout << "Loaded incomes from file. " << endl;
 
     return incomes;

@@ -64,6 +64,8 @@ void FileWithExpenses::addExpenseToFile(Expense expense)
 
     xml.OutOfElem();
     xml.Save(getFileName() + ".xml");
+
+    lastExpenseId++;
 }
 
 vector <Expense> FileWithExpenses::loadExpensesOfLoggedInUserFromFile(int loggedInUserId)
@@ -86,6 +88,7 @@ vector <Expense> FileWithExpenses::loadExpensesOfLoggedInUserFromFile(int logged
             expenses.push_back(getExpenseData(xml));
         }
     }
+    lastExpenseId = getLastExpenseIdFromFile(xml);
     cout << "Loaded expenses from file. " << endl;
 
     return expenses;
