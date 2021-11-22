@@ -1,5 +1,5 @@
-#ifndef FILEOFEXPENSE_H
-#define FILEOFEXPENSE_H
+#ifndef FILEWITHEXPENSES_H
+#define FILEWITHEXPENSES_H
 
 #include <iostream>
 #include <vector>
@@ -10,9 +10,22 @@
 
 using namespace std;
 
-class FileWithExpense : public TextFile
+class FileWithExpenses : public TextFile
 {
+    int lastExpenseId;
 
+    Expense getExpenseData(CMarkup xml);
+    int getLastExpenseIdFromFile(CMarkup xml);
+
+public:
+    FileWithExpenses(string fileName) : TextFile (fileName)
+    {
+        lastExpenseId = 0;
+    }
+
+    void addExpenseToFile(Expense expense);
+    vector <Expense> loadExpensesOfLoggedInUserFromFile(int loggedInUserId);
+    int getLastExpenseId();
 };
 
 #endif

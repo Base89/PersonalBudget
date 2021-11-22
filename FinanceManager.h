@@ -4,7 +4,9 @@
 #include <iostream>
 #include <string>
 #include <cctype>
+#include <vector>
 
+#include "Date.h"
 #include "AuxiliaryMethods.h"
 
 using namespace std;
@@ -16,7 +18,6 @@ class FinanceManager
     bool isGreaterThanZero(string amount);
     bool isAmountDigit(string amount);
     string saveTwoDecimalPlaces(string amount);
-    void getDatePeriod();
 
 public:
     string validateAmount();

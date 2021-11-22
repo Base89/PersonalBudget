@@ -16,15 +16,15 @@ class IncomeManager : public FinanceManager
     FileWithIncomes fileWithIncomes;
 
     Income getNewIncomeData();
-    void sortIncomesFromEldest();
+    vector <Income> sortIncomesFromEldest(vector <Income> incomes);
     double sumIncomes();
     void displayIncomes();
     void displayIncomesSum();
     void displayAmountOfIncomes();
-    void searchIncomesBySelectedPeriod();
+    vector <Income> searchIncomesBySelectedPeriod(int startingDate, int closingDate);
 
 public:
-    IncomeManager() {}
+    IncomeManager(string fileNameWithIncomes) : fileWithIncomes(fileNameWithIncomes) {}
 
     void addIncome();
     void displayIncomeBalance();

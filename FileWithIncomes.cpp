@@ -46,16 +46,6 @@ int FileWithIncomes::getLastIncomeIdFromFile(CMarkup xml)
     return AuxiliaryMethods::convertStringToInt(strIncomeId);
 }
 
-vector <Date> FileWithIncomes::getDatesToPeriod(string startingDate, string closingDate)
-{
-
-}
-
-vector <Income> FileWithIncomes::searchIncomesBySelectedPeriod(vector <Date>)
-{
-
-}
-
 void FileWithIncomes::addIncomeToFile(Income income)
 {
     CMarkup xml;
@@ -105,4 +95,3 @@ int FileWithIncomes::getLastIncomeId()
 {
     return lastIncomeId;
 }
-

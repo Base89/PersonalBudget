@@ -1,11 +1,10 @@
-#ifndef FILEOFINCOMES_H
-#define FILEOFINCOMES_H
+#ifndef FILEWITHINCOMES_H
+#define FILEWITHINCOMES_H
 
 #include <iostream>
 #include <vector>
 
 #include "Income.h"
-#include "Date.h"
 #include "TextFile.h"
 #include "AuxiliaryMethods.h"
 
@@ -17,8 +16,6 @@ class FileWithIncomes : public TextFile
 
     Income getIncomeData(CMarkup xml);
     int getLastIncomeIdFromFile(CMarkup xml);
-    vector <Date> getDatesToPeriod(string startingDate, string closingDate);
-    vector <Income> searchIncomesBySelectedPeriod(vector <Date>);
 
 public:
     FileWithIncomes(string fileName) : TextFile (fileName)

@@ -115,8 +115,3 @@ string FinanceManager::saveTwoDecimalPlaces(string amount)
     else
         return amount.substr (0, position + 3);
 }
-
-void FinanceManager::getDatePeriod()
-{
-
-}

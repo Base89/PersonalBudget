@@ -1,5 +1,5 @@
-#ifndef FILEOFUSERS_H
-#define FILEOFUSERS_H
+#ifndef FILEWITHUSERS_H
+#define FILEWITHUSERS_H
 
 #include <iostream>
 #include <vector>
