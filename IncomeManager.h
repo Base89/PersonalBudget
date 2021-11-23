@@ -7,6 +7,7 @@
 #include "Income.h"
 #include "FinanceManager.h"
 #include "FileWithIncomes.h"
+#include "DateManager.h"
 #include "AuxiliaryMethods.h"
 
 using namespace std;
@@ -24,6 +25,7 @@ class IncomeManager : public FinanceManager
     void displayIncomesSum();
     void displayAmountOfIncomes();
     vector <Income> searchIncomesBySelectedPeriod(int startingDate, int closingDate);
+    char selectOptionFromDateMenu();
 
 public:
     IncomeManager(string fileNameWithIncomes, int loggedInUserId) : fileWithIncomes(fileNameWithIncomes), LOGGED_IN_USER_ID(loggedInUserId)

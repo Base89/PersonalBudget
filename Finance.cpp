@@ -30,7 +30,7 @@ void Finance::setDate(int newDate)
 {
     const int BORDER_DATE = 20000000;
     if (newDate > BORDER_DATE)
-    date = newDate;
+        date = newDate;
 }
 
 void Finance::setItem(string newItem)
@@ -41,5 +41,5 @@ void Finance::setItem(string newItem)
 void Finance::setAmount(double newAmount)
 {
     if (newAmount > 0)
-    amount = newAmount;
+        amount = newAmount;
 }

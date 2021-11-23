@@ -6,13 +6,31 @@ Income IncomeManager::getNewIncomeData()
     int date = 0;
     string item = "";
     double amount = 0;
+    char choice;
 
     income.setIncomeId(fileWithIncomes.getLastIncomeId() + 1);
     income.setUserId(LOGGED_IN_USER_ID);
 
-    cout << "Do you want to select today's date for income? (y / n)";
+    cout << ">> Select income date <<" << endl << endl;
+    choice = selectOptionFromDateMenu();
 
-    cout << "Enter income date: ";
+    if (choice == '1')
+    {
+
+        cout << "Today's date downloaded" << endl;
+    }
+    else if (choice == '2')
+    {
+        cout << "Enter your date: ";
+    }
+    else if (choice == '9')
+    {
+        cout << endl << "Back to User Menu" << endl << endl;
+    }
+    else
+    {
+        cout << endl << "Incorrect choice. Back to User Menu." << endl << endl;
+    }
 
     cout << "Enter income source: ";
 
@@ -48,6 +66,19 @@ void IncomeManager::displayAmountOfIncomes()
 vector <Income> IncomeManager::searchIncomesBySelectedPeriod(int startingDate, int closingDate)
 {
 
+}
+
+char IncomeManager::selectOptionFromDateMenu()
+{
+    char choice;
+
+    cout << "1 - Today's date" << endl;
+    cout << "2 - Other date" << endl;
+    cout << "9 - Back " << endl;
+    cout << endl << "Your choice: ";
+    choice = AuxiliaryMethods::loadChar();
+
+    return choice;
 }
 
 void IncomeManager::addIncome()

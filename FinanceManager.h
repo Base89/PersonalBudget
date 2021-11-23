@@ -6,7 +6,6 @@
 #include <cctype>
 #include <vector>
 
-#include "Date.h"
 #include "AuxiliaryMethods.h"
 
 using namespace std;
