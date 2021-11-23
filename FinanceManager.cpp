@@ -5,7 +5,7 @@ int FinanceManager::getLoggedInUserId()
 
 }
 
-string FinanceManager::validateAmount()
+double FinanceManager::validateAmount()
 {
     bool validAmount = 0;
     string strAmount = "";
@@ -33,9 +33,8 @@ string FinanceManager::validateAmount()
         }
         else
             strAmount = saveTwoDecimalPlaces(strAmount);
-
     }
-    return strAmount;
+    return AuxiliaryMethods::convertStringToDouble(strAmount);
 }
 
 bool FinanceManager::isValidSeparated(string amount)
@@ -114,4 +113,11 @@ string FinanceManager::saveTwoDecimalPlaces(string amount)
     }
     else
         return amount.substr (0, position + 3);
+}
+
+double FinanceManager::setPrecisionToTwoDecimalPlaces(double doubleNumber)
+{
+    int intNumber = doubleNumber * 100;
+
+    return (intNumber * 0.01);
 }

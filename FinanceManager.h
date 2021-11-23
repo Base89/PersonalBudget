@@ -19,7 +19,8 @@ class FinanceManager
     string saveTwoDecimalPlaces(string amount);
 
 public:
-    string validateAmount();
+    double validateAmount();
+    double setPrecisionToTwoDecimalPlaces(double doubleNumber);
 };
 
 #endif

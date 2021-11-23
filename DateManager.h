@@ -12,21 +12,19 @@ class DateManager
 {
     static const int AMOUNT_MONTH_DAYS[][13];
 
-    bool isYearLeap(int year);
-    int getAmountDaysOfMonth(int month, int year);
-    int getAmountDaysOfYear(int day, int month, int year);
-    int convertDateSeparatedDashesToInt(string dateSeparatedDashes);
+    static bool isYearLeap(int year);
     string convertIntDateToDateWithDashes(int intDate);
-    string convertDateToDoubleDigit(string inputDate);
-    bool isDateDigits(string enteredDate);
-    string validateYear();
-    string validateMonth();
-    string validateDay(string enteredYear, string enteredMonth);
-    string typeDate();
+    static string convertDateToDoubleDigit(string inputDate);
+    static bool isDateDigits(string enteredDate);
+    static string validateYear();
+    static string validateMonth();
+    static string validateDay(string enteredYear, string enteredMonth);
+    static string typeDate();
 public:
 
-    string getCurrentDate();
-    string getUserDate();
+    static string getCurrentDate();
+    static string getUserDate();
+    static int convertDateSeparatedDashesToInt(string dateSeparatedDashes);
 };
 
 #endif

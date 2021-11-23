@@ -19,6 +19,7 @@ class IncomeManager : public FinanceManager
     FileWithIncomes fileWithIncomes;
 
     Income getNewIncomeData();
+    int selectIncomeDate();
     vector <Income> sortIncomesFromEldest(vector <Income> incomes);
     double sumIncomes();
     void displayIncomes();

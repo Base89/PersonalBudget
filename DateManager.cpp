@@ -9,33 +9,6 @@ bool DateManager::isYearLeap(int year)
     return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
 }
 
-int DateManager::getAmountDaysOfMonth(int month, int year)
-{
-    return AMOUNT_MONTH_DAYS[isYearLeap(year)][month];
-}
-
-int DateManager::getAmountDaysOfYear(int day, int month, int year)
-{
-    int yearDay = 0;
-
-    while (--month > 0)
-        yearDay += AMOUNT_MONTH_DAYS[isYearLeap(year)][month];
-
-    return yearDay;
-}
-
-int DateManager::convertDateSeparatedDashesToInt(string dateSeparatedDashes)
-{
-    string dateWithoutDashes = "";
-
-    for (int i = 0; i < dateSeparatedDashes.length(); i++)
-    {
-        if (isdigit(dateSeparatedDashes[i]) == true)
-            dateWithoutDashes += dateSeparatedDashes[i];
-    }
-    return AuxiliaryMethods::convertStringToInt(dateWithoutDashes);
-}
-
 string DateManager::convertIntDateToDateWithDashes(int intDate)
 {
     const int dateDigits = 8;
@@ -178,14 +151,26 @@ string DateManager::getUserDate()
 {
     string year, month, day = "";
 
-    cout << "Enter year : ";
+    cout << endl << "Enter year : ";
     year = validateYear();
 
-    cout << "Enter month : ";
+    cout << endl << "Enter month : ";
     month = validateMonth();
 
-    cout << "Enter day : ";
+    cout << endl << "Enter day : ";
     day = validateDay(year, month);
 
     return year + '-' + convertDateToDoubleDigit(month) + '-' + convertDateToDoubleDigit(day);
+}
+
+int DateManager::convertDateSeparatedDashesToInt(string dateSeparatedDashes)
+{
+    string dateWithoutDashes = "";
+
+    for (int i = 0; i < dateSeparatedDashes.length(); i++)
+    {
+        if (isdigit(dateSeparatedDashes[i]) == true)
+            dateWithoutDashes += dateSeparatedDashes[i];
+    }
+    return AuxiliaryMethods::convertStringToInt(dateWithoutDashes);
 }
