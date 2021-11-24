@@ -32,7 +32,7 @@ double FinanceManager::validateAmount()
             validAmount = 0;
         }
         else
-            strAmount = saveTwoDecimalPlaces(strAmount);
+            strAmount = AuxiliaryMethods::changeCommaForDot(saveTwoDecimalPlaces(strAmount));
     }
     return AuxiliaryMethods::convertStringToDouble(strAmount);
 }

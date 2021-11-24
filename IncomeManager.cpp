@@ -14,6 +14,7 @@ Income IncomeManager::getNewIncomeData()
     cout << "Enter income amount: ";
     income.setAmount(validateAmount());
 
+    return income;
 }
 
 int IncomeManager::selectIncomeDate()
