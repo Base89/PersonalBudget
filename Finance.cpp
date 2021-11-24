@@ -1,5 +1,10 @@
 #include "Finance.h"
 
+bool Finance::operator < (const Finance &secondDate) const
+{
+    return date < secondDate.date;
+}
+
 int Finance::getUserId()
 {
     return userId;

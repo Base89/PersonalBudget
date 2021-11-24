@@ -2,44 +2,9 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="Income.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="FinanceManager.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="147" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Finance.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="109" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="IncomeManager.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="418" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="19" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="FinanceManager.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="461" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="AuxiliaryMethods.cpp" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2123" topLine="85" />
-		</Cursor>
-	</File>
-	<File name="User.cpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="21" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="ExpenseManager.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="557" topLine="0" />
+			<Cursor1 position="1001" topLine="20" />
 		</Cursor>
 	</File>
 	<File name="FileWithExpenses.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -47,19 +12,9 @@
 			<Cursor1 position="174" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Expense.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="ExpenseManager.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="77" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="FileWithUsers.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1263" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="FileWithUsers.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="41" topLine="0" />
+			<Cursor1 position="27" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="TextFile.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -67,9 +22,14 @@
 			<Cursor1 position="285" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="FileWithIncomes.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Income.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="316" topLine="0" />
+			<Cursor1 position="183" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Finance.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="63" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="AuxiliaryMethods.h" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -77,9 +37,24 @@
 			<Cursor1 position="622" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="User.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="IncomeManager.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="81" topLine="0" />
+			<Cursor1 position="856" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="FileWithUsers.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1263" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Expense.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="77" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Income.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="147" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="DateManager.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -87,34 +62,14 @@
 			<Cursor1 position="4108" topLine="138" />
 		</Cursor>
 	</File>
-	<File name="Finance.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="447" topLine="19" />
-		</Cursor>
-	</File>
-	<File name="DateManager.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="254" topLine="4" />
-		</Cursor>
-	</File>
-	<File name="Income.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="183" topLine="0" />
-		</Cursor>
-	</File>
 	<File name="Expense.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="238" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="FinanceManager.cpp" open="1" top="1" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="FileWithUsers.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="965" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="FileWithExpenses.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1727" topLine="47" />
+			<Cursor1 position="41" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="FileWithIncomes.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -122,20 +77,65 @@
 			<Cursor1 position="1606" topLine="0" />
 		</Cursor>
 	</File>
+	<File name="User.cpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="21" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Finance.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="220" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="IncomeManager.cpp" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3121" topLine="97" />
+		</Cursor>
+	</File>
+	<File name="FileWithExpenses.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1727" topLine="47" />
+		</Cursor>
+	</File>
+	<File name="FileWithIncomes.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="316" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="19" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="DateManager.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="254" topLine="4" />
+		</Cursor>
+	</File>
+	<File name="ExpenseManager.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="557" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="User.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="81" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="FinanceManager.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="461" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="TextFile.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="18" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="ExpenseManager.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="AuxiliaryMethods.cpp" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="27" topLine="0" />
+			<Cursor1 position="2123" topLine="33" />
 		</Cursor>
 	</File>
-	<File name="IncomeManager.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="449" topLine="3" />
-		</Cursor>
-	</File>
-	<EditorTabsLayout layout="074b8100619d22850004871d00000002=0;PersonalBudget:IncomeManager.h,1;PersonalBudget:IncomeManager.cpp,2;PersonalBudget:FinanceManager.h,3;PersonalBudget:FileWithIncomes.h,5;PersonalBudget:DateManager.h,*6;PersonalBudget:FinanceManager.cpp@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=836;besth=307;minw=836;minh=307;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=074b8100619d22850004871d00000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=250;besth=250;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=252|" />
+	<EditorTabsLayout layout="082a5f70619e78ed0014811a00000002=1;PersonalBudget:IncomeManager.h,*0;PersonalBudget:IncomeManager.cpp,2;PersonalBudget:FinanceManager.h,3;PersonalBudget:FileWithIncomes.h,4;PersonalBudget:DateManager.h@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=225;besth=225;minw=225;minh=225;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=082a5f70619e78ed0014811a00000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=250;besth=250;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=252|" />
 </CodeBlocks_layout_file>

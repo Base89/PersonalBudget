@@ -54,29 +54,68 @@ int IncomeManager::selectIncomeDate()
     return date;
 }
 
-vector <Income> IncomeManager::sortIncomesFromEldest(vector <Income> incomes)
+vector <Income> IncomeManager::sortIncomesFromEldest(vector <Income> selectedIncomes)
 {
+    vector <Income> sortedIncomes;
 
+    sort(incomes.begin(), incomes.end());
+
+    return sortedIncomes;
 }
 
-double IncomeManager::sumIncomes()
+double IncomeManager::sumIncomes(vector <Income> selectedIncomes)
 {
-
+    double total = 0;
+    for (int i = 0; i < selectedIncomes.size(); i++)
+    {
+        total += selectedIncomes[i].getAmount();
+    }
+    return total;
 }
 
-void IncomeManager::displayIncomes()
+void IncomeManager::displayIncome(Income income)
 {
-
+    cout << endl << "Income ID:         " << income.getIncomeId() << endl;
+    cout << "Date Income:       " << income.getDate() << endl;
+    cout << "Source Income:     " << income.getItem() << endl;
+    cout << "Amount:            " << income.getAmount() << endl;
 }
 
-void IncomeManager::displayIncomesSum()
+void IncomeManager::displayAllIncomes(vector <Income> selectedIncomes)
 {
+    int amountIncomes = 0;
 
+    system("cls");
+    if (!selectedIncomes.empty())
+    {
+        cout << "             >>> INCOMES <<<" << endl;
+        cout << "-----------------------------------------------" << endl;
+        for (vector <Income> :: iterator itr = selectedIncomes.begin(); itr != selectedIncomes.end(); itr++)
+        {
+            displayIncome(*itr);
+            amountIncomes++;
+        }
+        cout << endl;
+        displayAmountOfIncomes(amountIncomes);
+    }
+    else
+    {
+        cout << endl << "No incomes." << endl << endl;
+    }
+    system("pause");
 }
 
-void IncomeManager::displayAmountOfIncomes()
+void IncomeManager::displayIncomesSum(vector <Income> selectedIncomes)
 {
+    cout << endl << "TOTAL INCOME:         " << sumIncomes(selectedIncomes) << endl;
+}
 
+void IncomeManager::displayAmountOfIncomes(int amountIncomes)
+{
+    if (amountIncomes == 0)
+        cout << endl << "No income." << endl;
+    else
+        cout << endl << "The amount of income is: " << amountIncomes << endl << endl;
 }
 
 vector <Income> IncomeManager::searchIncomesBySelectedPeriod(int startingDate, int closingDate)

@@ -13,6 +13,7 @@ class Finance
     double amount;
 
 public:
+    bool operator < (const Finance &secondDate) const;
     int getUserId();
     int getDate();
     string getItem();

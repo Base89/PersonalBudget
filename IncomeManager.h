@@ -2,7 +2,9 @@
 #define INCOMEMANAGER_H
 
 #include <iostream>
+#include <string>
 #include <vector>
+#include <cstdlib>
 
 #include "Income.h"
 #include "FinanceManager.h"
@@ -20,11 +22,12 @@ class IncomeManager : public FinanceManager
 
     Income getNewIncomeData();
     int selectIncomeDate();
-    vector <Income> sortIncomesFromEldest(vector <Income> incomes);
-    double sumIncomes();
-    void displayIncomes();
-    void displayIncomesSum();
-    void displayAmountOfIncomes();
+    vector <Income> sortIncomesFromEldest(vector <Income> selectedIncomes);
+    double sumIncomes(vector <Income> selectedIncomes);
+    void displayIncome(Income income);
+    void displayAllIncomes(vector <Income> selectedIncomes);
+    void displayIncomesSum(vector <Income> selectedIncomes);
+    void displayAmountOfIncomes(int amountIncomes);
     vector <Income> searchIncomesBySelectedPeriod(int startingDate, int closingDate);
     char selectOptionFromDateMenu();
 

@@ -4,7 +4,7 @@
 1637605203 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\expensemanager.cpp
 	"ExpenseManager.h"
 
-1637699307 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\incomemanager.cpp
+1637784637 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\incomemanager.cpp
 	"IncomeManager.h"
 
 1637253387 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\main.cpp
@@ -47,10 +47,10 @@
 1636695948 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\user.h
 	<iostream>
 
-1637692982 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\finance.cpp
+1637781741 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\finance.cpp
 	"Finance.h"
 
-1636748152 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\finance.h
+1637781731 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\finance.h
 	<iostream>
 
 1636748328 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\income.h
@@ -126,9 +126,11 @@
 	"TextFile.h"
 	"AuxiliaryMethods.h"
 
-1637697149 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\incomemanager.h
+1637784664 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\incomemanager.h
 	<iostream>
+	<string>
 	<vector>
+	<cstdlib>
 	"Income.h"
 	"FinanceManager.h"
 	"FileWithIncomes.h"
