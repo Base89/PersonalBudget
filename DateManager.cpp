@@ -11,26 +11,9 @@ bool DateManager::isYearLeap(int year)
 
 string DateManager::convertIntDateToDateWithDashes(int intDate)
 {
-    const int dateDigits = 8;
-    string year, month, day = "";
     string strDate = AuxiliaryMethods::convertIntToString(intDate);
 
-    for (int i = 0; i < dateDigits; i++)
-    {
-        if (i <= 3)
-        {
-            year += strDate[i];
-        }
-        else if (i > 3 && i <= 5)
-        {
-            month += strDate[i];
-        }
-        else if (i > 5)
-        {
-            day += strDate[i];
-        }
-    }
-    return year + '-' + convertDateToDoubleDigit(month) + '-' + convertDateToDoubleDigit(day);
+    return getYearFromDate(strDate) + '-' + getMonthFromDate(strDate) + '-' + getDayFromDate(strDate);
 }
 
 string DateManager::convertDateToDoubleDigit(string inputDate)
@@ -134,6 +117,51 @@ string DateManager::typeDate()
     return inputDate;
 }
 
+string DateManager::getYearFromDate(string selectedDate)
+{
+    const int dateDigits = 8;
+    string year = "";
+
+    for (int i = 0; i < dateDigits; i++)
+    {
+        if (i <= 3)
+        {
+            year += selectedDate[i];
+        }
+    }
+    return year;
+}
+
+string DateManager::getMonthFromDate(string selectedDate)
+{
+    const int dateDigits = 8;
+    string month = "";
+
+    for (int i = 0; i < dateDigits; i++)
+    {
+        if (i > 3 && i <= 5)
+        {
+            month += selectedDate[i];
+        }
+    }
+    return month;
+}
+
+string DateManager::getDayFromDate(string selectedDate)
+{
+    const int dateDigits = 8;
+    string day = "";
+
+    for (int i = 0; i < dateDigits; i++)
+    {
+        if (i > 5)
+        {
+            day += selectedDate[i];
+        }
+    }
+    return day;
+}
+
 string DateManager::getCurrentDate()
 {
     time_t myDate;
@@ -173,4 +201,59 @@ int DateManager::convertDateSeparatedDashesToInt(string dateSeparatedDashes)
             dateWithoutDashes += dateSeparatedDashes[i];
     }
     return AuxiliaryMethods::convertStringToInt(dateWithoutDashes);
+}
+
+string DateManager::getFirstDayOfMonth(string currentDateWithDashes)
+{
+    const int dateDigits = 8;
+    string currentDate = AuxiliaryMethods::convertIntToString(convertDateSeparatedDashesToInt(currentDateWithDashes));
+
+    for (int i = 0; i < dateDigits; i++)
+    {
+        if (i == 6)
+        {
+            currentDate[i] = '0';
+            currentDate[i + 1] = '1';
+        }
+    }
+    return currentDate;
+}
+
+string DateManager::getFirstDayOfPreviousMonth()
+{
+    string currentDate = AuxiliaryMethods::convertIntToString(convertDateSeparatedDashesToInt(getCurrentDate()));
+    int year = AuxiliaryMethods::convertStringToInt(getYearFromDate(currentDate));
+    int month = AuxiliaryMethods::convertStringToInt(getMonthFromDate(currentDate));
+
+    return getPreviousMonth(year, month);
+}
+
+string DateManager::getPreviousMonth(int year, int month)
+{
+    string day = "01";
+
+    if (month == 1)
+    {
+        month = 12;
+        year--;
+    }
+    else
+        month--;
+
+    return AuxiliaryMethods::convertIntToString(year) + convertDateToDoubleDigit(AuxiliaryMethods::convertIntToString(month)) + day;
+}
+
+int DateManager::getDaysSelectedMonth(string selectedDate)
+{
+
+    return AMOUNT_MONTH_DAYS[isYearLeap(AuxiliaryMethods::convertStringToInt(getYearFromDate(selectedDate)))][AuxiliaryMethods::convertStringToInt(getMonthFromDate(selectedDate))];
+}
+
+string DateManager::getLastDayOfMonth(string selectedDate)
+{
+    string year = getYearFromDate(selectedDate);
+    string month = getMonthFromDate(selectedDate);
+    string day = AuxiliaryMethods::convertIntToString(getDaysSelectedMonth(selectedDate));
+
+    return year + month + day;
 }
