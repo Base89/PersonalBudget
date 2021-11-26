@@ -120,20 +120,26 @@ void IncomeManager::displayAmountOfIncomes(int amountIncomes)
 
 vector <Income> IncomeManager::searchIncomesBySelectedPeriod(int startingDate, int closingDate)
 {
+    vector <Income> selectedIncomes;
 
+    for ( vector <Income>::iterator itr = incomes.begin(); itr < incomes.end(); itr++)
+    {
+        if ((itr->Income::getDate() >= startingDate) && (itr->Income::getDate() <= closingDate))
+        {
+            selectedIncomes.push_back(*itr);
+        }
+    }
+    return selectedIncomes;
 }
 
 char IncomeManager::selectOptionFromDateMenu()
 {
-    char choice;
-
     cout << "1 - Today's date" << endl;
     cout << "2 - Other date" << endl;
     cout << "9 - Back " << endl;
     cout << endl << "Your choice: ";
-    choice = AuxiliaryMethods::loadChar();
 
-    return choice;
+    return AuxiliaryMethods::loadChar();
 }
 
 void IncomeManager::addIncome()
