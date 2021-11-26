@@ -7,6 +7,7 @@
 #include <vector>
 
 #include "AuxiliaryMethods.h"
+#include "DateManager.h"
 
 using namespace std;
 
@@ -17,8 +18,10 @@ class FinanceManager
     bool isGreaterThanZero(string amount);
     bool isAmountDigit(string amount);
     string saveTwoDecimalPlaces(string amount);
+    char selectOptionFromDateMenu();
 
-public:
+protected:
+    int selectDate();
     double validateAmount();
     double setPrecisionToTwoDecimalPlaces(double doubleNumber);
 };
