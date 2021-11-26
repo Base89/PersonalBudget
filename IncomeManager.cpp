@@ -102,20 +102,19 @@ void IncomeManager::displayAllIncomes(vector <Income> selectedIncomes)
     {
         cout << endl << "No incomes." << endl << endl;
     }
-    system("pause");
 }
 
 void IncomeManager::displayIncomesSum(vector <Income> selectedIncomes)
 {
-    cout << endl << "TOTAL INCOME:         " << sumIncomes(selectedIncomes) << endl;
+    cout << "TOTAL INCOME:      " << sumIncomes(selectedIncomes) << endl << endl;
 }
 
 void IncomeManager::displayAmountOfIncomes(int amountIncomes)
 {
     if (amountIncomes == 0)
-        cout << endl << "No income." << endl;
+        cout << "No income." << endl << endl;
     else
-        cout << endl << "The amount of income is: " << amountIncomes << endl << endl;
+        cout << "The amount of income is: " << amountIncomes << endl << endl;
 }
 
 vector <Income> IncomeManager::searchIncomesBySelectedPeriod(int startingDate, int closingDate)
@@ -144,10 +143,38 @@ char IncomeManager::selectOptionFromDateMenu()
 
 void IncomeManager::addIncome()
 {
+    Income income;
+
+    system("cls");
+    cout << " >>> ADDING NEW INCOME <<<" << endl << endl;
+    income = getNewIncomeData();
+
+    incomes.push_back(income);
+    if (fileWithIncomes.addIncomeToFile(income))
+        cout << "New income has been added." << endl;
+    else
+        cout << "Error! New income has not been added." << endl;
+    system("pause");
+}
+
+void IncomeManager::displayIncomeBalanceOfCurrentMonth()
+{
+    vector <Income> currentMonthIncomes;
+    int firstDate = AuxiliaryMethods::convertStringToInt(DateManager::getFirstDayOfMonth(DateManager::getCurrentDate()));
+    int lastDate = DateManager::convertDateSeparatedDashesToInt(DateManager::getCurrentDate());
+
+    currentMonthIncomes = searchIncomesBySelectedPeriod(firstDate, lastDate);
+    displayAllIncomes(currentMonthIncomes);
+    displayIncomesSum(currentMonthIncomes);
+    system("pause");
+}
+
+void IncomeManager::displayIncomeBalanceOfPreviousMonth()
+{
 
 }
 
-void IncomeManager::displayIncomeBalance()
+void IncomeManager::displayIncomeBalanceOfSelectedPeriod()
 {
 
 }

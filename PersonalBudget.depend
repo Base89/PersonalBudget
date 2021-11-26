@@ -4,7 +4,7 @@
 1637605203 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\expensemanager.cpp
 	"ExpenseManager.h"
 
-1637904542 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\incomemanager.cpp
+1637909995 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\incomemanager.cpp
 	"IncomeManager.h"
 
 1637253387 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\main.cpp
@@ -61,10 +61,10 @@
 	<iostream>
 	"Finance.h"
 
-1637608117 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithexpenses.cpp
+1637908028 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithexpenses.cpp
 	"FileWithExpenses.h"
 
-1637608045 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithincomes.cpp
+1637907996 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithincomes.cpp
 	"FileWithIncomes.h"
 
 1637264004 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithusers.cpp
@@ -119,14 +119,14 @@
 	"TextFile.h"
 	"AuxiliaryMethods.h"
 
-1637604054 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithincomes.h
+1637907996 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithincomes.h
 	<iostream>
 	<vector>
 	"Income.h"
 	"TextFile.h"
 	"AuxiliaryMethods.h"
 
-1637786293 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\incomemanager.h
+1637907249 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\incomemanager.h
 	<iostream>
 	<string>
 	<vector>
@@ -137,7 +137,7 @@
 	"DateManager.h"
 	"AuxiliaryMethods.h"
 
-1637604054 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithexpenses.h
+1637908028 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithexpenses.h
 	<iostream>
 	<vector>
 	"Expense.h"

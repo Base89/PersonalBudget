@@ -38,7 +38,9 @@ public:
     };
 
     void addIncome();
-    void displayIncomeBalance();
+    void displayIncomeBalanceOfCurrentMonth();
+    void displayIncomeBalanceOfPreviousMonth();
+    void displayIncomeBalanceOfSelectedPeriod();
 };
 
 #endif

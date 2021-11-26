@@ -23,7 +23,7 @@ public:
         lastIncomeId = 0;
     }
 
-    void addIncomeToFile(Income income);
+    bool addIncomeToFile(Income income);
     vector <Income> loadIncomesOfLoggedInUserFromFile(int loggedInUserId);
     int getLastIncomeId();
 };

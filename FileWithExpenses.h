@@ -23,7 +23,7 @@ public:
         lastExpenseId = 0;
     }
 
-    void addExpenseToFile(Expense expense);
+    bool addExpenseToFile(Expense expense);
     vector <Expense> loadExpensesOfLoggedInUserFromFile(int loggedInUserId);
     int getLastExpenseId();
 };
