@@ -4,7 +4,7 @@
 1637605203 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\expensemanager.cpp
 	"ExpenseManager.h"
 
-1637909995 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\incomemanager.cpp
+1637954451 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\incomemanager.cpp
 	"IncomeManager.h"
 
 1637253387 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\main.cpp
@@ -23,7 +23,7 @@
 1636694806 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\date.h
 	<iostream>
 
-1637872595 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\datemanager.cpp
+1637952831 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\datemanager.cpp
 	"DateManager.h"
 
 1636750323 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\expense.cpp
@@ -105,7 +105,7 @@
 	<vector>
 	"AuxiliaryMethods.h"
 
-1637872073 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\datemanager.h
+1637952819 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\datemanager.h
 	<iostream>
 	<ctime>
 	"AuxiliaryMethods.h"
@@ -126,11 +126,12 @@
 	"TextFile.h"
 	"AuxiliaryMethods.h"
 
-1637907249 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\incomemanager.h
+1637954305 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\incomemanager.h
 	<iostream>
 	<string>
 	<vector>
 	<cstdlib>
+	<iomanip>
 	"Income.h"
 	"FinanceManager.h"
 	"FileWithIncomes.h"

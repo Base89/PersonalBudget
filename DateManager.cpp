@@ -191,14 +191,14 @@ string DateManager::getUserDate()
     return year + '-' + convertDateToDoubleDigit(month) + '-' + convertDateToDoubleDigit(day);
 }
 
-int DateManager::convertDateSeparatedDashesToInt(string dateSeparatedDashes)
+int DateManager::convertDateSeparatedDashesToInt(string dateWithDashes)
 {
     string dateWithoutDashes = "";
 
-    for (int i = 0; i < dateSeparatedDashes.length(); i++)
+    for (int i = 0; i < dateWithDashes.length(); i++)
     {
-        if (isdigit(dateSeparatedDashes[i]) == true)
-            dateWithoutDashes += dateSeparatedDashes[i];
+        if (isdigit(dateWithDashes[i]) == true)
+            dateWithoutDashes += dateWithDashes[i];
     }
     return AuxiliaryMethods::convertStringToInt(dateWithoutDashes);
 }

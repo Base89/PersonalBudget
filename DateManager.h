@@ -24,14 +24,14 @@ class DateManager
     static string getMonthFromDate(string selectedDate);
     static string getDayFromDate(string selectedDate);
     static string getPreviousMonth(int year, int month);
+    static int getDaysSelectedMonth(string selectedDate);
 public:
 
     static string getCurrentDate();
     static string getUserDate();
-    static int convertDateSeparatedDashesToInt(string dateSeparatedDashes);
+    static int convertDateSeparatedDashesToInt(string dateWithDashes);
     static string getFirstDayOfMonth(string currentDateWithDashes);
     static string getFirstDayOfPreviousMonth();
-    static int getDaysSelectedMonth(string selectedDate);
     static string getLastDayOfMonth(string selectedDate);
 };
 

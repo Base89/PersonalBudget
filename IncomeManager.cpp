@@ -78,7 +78,7 @@ void IncomeManager::displayIncome(Income income)
     cout << endl << "Income ID:         " << income.getIncomeId() << endl;
     cout << "Date Income:       " << income.getDate() << endl;
     cout << "Source Income:     " << income.getItem() << endl;
-    cout << "Amount:            " << income.getAmount() << endl;
+    cout << "Amount:            " << fixed << setprecision(2) << income.getAmount() << endl;
 }
 
 void IncomeManager::displayAllIncomes(vector <Income> selectedIncomes)
@@ -106,7 +106,7 @@ void IncomeManager::displayAllIncomes(vector <Income> selectedIncomes)
 
 void IncomeManager::displayIncomesSum(vector <Income> selectedIncomes)
 {
-    cout << "TOTAL INCOME:      " << sumIncomes(selectedIncomes) << endl << endl;
+    cout << "TOTAL INCOME:      " << fixed << setprecision(2) << sumIncomes(selectedIncomes) << endl << endl;
 }
 
 void IncomeManager::displayAmountOfIncomes(int amountIncomes)
@@ -171,10 +171,25 @@ void IncomeManager::displayIncomeBalanceOfCurrentMonth()
 
 void IncomeManager::displayIncomeBalanceOfPreviousMonth()
 {
+    vector <Income> previousMonthIncomes;
+    int firstDate = AuxiliaryMethods::convertStringToInt(DateManager::getFirstDayOfPreviousMonth());
+    int lastDate = AuxiliaryMethods::convertStringToInt(DateManager::getLastDayOfMonth(DateManager::getFirstDayOfPreviousMonth()));
 
+    previousMonthIncomes = searchIncomesBySelectedPeriod(firstDate, lastDate);
+    displayAllIncomes(previousMonthIncomes);
+    displayIncomesSum(previousMonthIncomes);
+    system("pause");
 }
 
 void IncomeManager::displayIncomeBalanceOfSelectedPeriod()
 {
+    vector <Income> selectedPeriodIncomes;
 
+    int firstDate = DateManager::convertDateSeparatedDashesToInt(DateManager::getUserDate());
+    int lastDate = DateManager::convertDateSeparatedDashesToInt(DateManager::getUserDate());
+
+    selectedPeriodIncomes = searchIncomesBySelectedPeriod(firstDate, lastDate);
+    displayAllIncomes(selectedPeriodIncomes);
+    displayIncomesSum(selectedPeriodIncomes);
+    system("pause");
 }
