@@ -48,7 +48,6 @@ void IncomeManager::displayAllIncomes(vector <Income> selectedIncomes)
 {
     int amountIncomes = 0;
 
-    system("cls");
     if (!selectedIncomes.empty())
     {
         cout << "             >>> INCOMES <<<" << endl;
@@ -134,12 +133,9 @@ void IncomeManager::displayIncomeBalanceOfPreviousMonth()
     system("pause");
 }
 
-void IncomeManager::displayIncomeBalanceOfSelectedPeriod()
+void IncomeManager::displayIncomeBalanceOfSelectedPeriod(int firstDate, int lastDate)
 {
     vector <Income> selectedPeriodIncomes;
-
-    int firstDate = DateManager::convertDateSeparatedDashesToInt(DateManager::getUserDate());
-    int lastDate = DateManager::convertDateSeparatedDashesToInt(DateManager::getUserDate());
 
     selectedPeriodIncomes = searchIncomesBySelectedPeriod(firstDate, lastDate);
     displayAllIncomes(selectedPeriodIncomes);

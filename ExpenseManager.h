@@ -39,7 +39,7 @@ public:
     void addExpense();
     void displayExpenseBalanceOfCurrentMonth();
     void displayExpenseBalanceOfPreviousMonth();
-    void displayExpenseBalanceOfSelectedPeriod();
+    void displayExpenseBalanceOfSelectedPeriod(int firstDate, int lastDate);
 };
 
 #endif

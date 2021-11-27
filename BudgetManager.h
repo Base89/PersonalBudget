@@ -13,44 +13,23 @@ using namespace std;
 class BudgetManager
 {
     const int LOGGED_IN_USER_ID;
-    IncomeManager *incomeManager;
-    ExpenseManager *expenseManager;
-    const string FILE_NAME_WITH_INCOMES;
-    const string FILE_NAME_WITH_EXPENSES;
+    IncomeManager incomeManager;
+    ExpenseManager expenseManager;
 
-    void getCurrentDate();
-    void enterAnotherDate();
-    void getIncomeData();
-    void getExpenseData();
-    void getCurrentMonthPeriod();
-    void getLastMonthPeriod();
-    void getSelectedPeriod();
-    void displayIncomeBalance();
-    void displayExpenseBalance();
-    void displayFullBalance();
+    void displayCurrentMonthBalanceHeader();
+    void displayPreviousMonthBalanceHeader();
+    void displaySelectedPeriodBalanceHeader();
 
 public:
     BudgetManager(string fileNameWithIncomes, string fileNameWithExpenses, int loggedInUserId)
-        : FILE_NAME_WITH_INCOMES(fileNameWithIncomes), FILE_NAME_WITH_EXPENSES(fileNameWithExpenses), LOGGED_IN_USER_ID(loggedInUserId)
-    {
-        incomeManager = NULL;
-        expenseManager = NULL;
-    };
-    ~BudgetManager()
-    {
-        delete incomeManager;
-        incomeManager = NULL;
-        delete expenseManager;
-        expenseManager = NULL;
-    };
+        : incomeManager(fileNameWithIncomes, loggedInUserId), expenseManager(fileNameWithExpenses, loggedInUserId), LOGGED_IN_USER_ID(loggedInUserId)
+    {};
 
     void addIncome();
     void addExpense();
     void displayCurrentMonthBalance();
     void displayPreviousMonthBalance();
     void displaySelectedPeriodBalance();
-    char selectOptionFromDateMenu();
-    char selectOptionFromBalanceMenu();
 };
 
 #endif

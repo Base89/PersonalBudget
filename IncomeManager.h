@@ -39,7 +39,7 @@ public:
     void addIncome();
     void displayIncomeBalanceOfCurrentMonth();
     void displayIncomeBalanceOfPreviousMonth();
-    void displayIncomeBalanceOfSelectedPeriod();
+    void displayIncomeBalanceOfSelectedPeriod(int firstDate, int lastDate);
 };
 
 #endif

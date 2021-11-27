@@ -48,7 +48,6 @@ void ExpenseManager::displayAllExpenses(vector <Expense> selectedExpenses)
 {
     int amountExpenses = 0;
 
-    system("cls");
     if (!selectedExpenses.empty())
     {
         cout << "             >>> EXPENSES <<<" << endl;
@@ -134,12 +133,9 @@ void ExpenseManager::displayExpenseBalanceOfPreviousMonth()
     system("pause");
 }
 
-void ExpenseManager::displayExpenseBalanceOfSelectedPeriod()
+void ExpenseManager::displayExpenseBalanceOfSelectedPeriod(int firstDate, int lastDate)
 {
     vector <Expense> selectedPeriodExpenses;
-
-    int firstDate = DateManager::convertDateSeparatedDashesToInt(DateManager::getUserDate());
-    int lastDate = DateManager::convertDateSeparatedDashesToInt(DateManager::getUserDate());
 
     selectedPeriodExpenses = searchExpensesBySelectedPeriod(firstDate, lastDate);
     displayAllExpenses(selectedPeriodExpenses);
