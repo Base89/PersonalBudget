@@ -15,7 +15,7 @@ class TextFile
 public:
     TextFile(string fileName) : FILE_NAME(fileName) {}
 
-    CMarkup loadFile(string fileName);
+    CMarkup loadFile();
     string getFileName();
 
 };

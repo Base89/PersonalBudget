@@ -2,10 +2,10 @@
 1637999639 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\budgetmanager.cpp
 	"BudgetManager.h"
 
-1637996719 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\expensemanager.cpp
+1638025986 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\expensemanager.cpp
 	"ExpenseManager.h"
 
-1637996719 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\incomemanager.cpp
+1638026001 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\incomemanager.cpp
 	"IncomeManager.h"
 
 1637253387 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\main.cpp
@@ -13,10 +13,10 @@
 
 1636638359 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\personalbudget.cpp
 
-1638004786 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\usermanager.cpp
+1638025997 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\usermanager.cpp
 	"UserManager.h"
 
-1637698940 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\auxiliarymethods.cpp
+1638025947 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\auxiliarymethods.cpp
 	"AuxiliaryMethods.h"
 
 1636748982 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\date.cpp
@@ -40,7 +40,7 @@
 1636749890 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\income.cpp
 	"Income.h"
 
-1637261205 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\textfile.cpp
+1638025677 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\textfile.cpp
 	"TextFile.h"
 
 1636696058 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\user.cpp
@@ -63,13 +63,13 @@
 	<iostream>
 	"Finance.h"
 
-1637908028 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithexpenses.cpp
+1638025498 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithexpenses.cpp
 	"FileWithExpenses.h"
 
-1637907996 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithincomes.cpp
+1638025515 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithincomes.cpp
 	"FileWithIncomes.h"
 
-1638005500 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithusers.cpp
+1638025791 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithusers.cpp
 	"FileWithUsers.h"
 
 1637692982 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\markup.cpp
@@ -86,18 +86,18 @@
 	<string>
 	<afx.h>
 
-1637261186 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\textfile.h
+1638025439 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\textfile.h
 	<iostream>
 	"Markup.h"
 	"AuxiliaryMethods.h"
 
-1637698940 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\auxiliarymethods.h
+1638025959 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\auxiliarymethods.h
 	<iostream>
 	<string>
 	<sstream>
 	<algorithm>
 
-1637958158 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\financemanager.cpp
+1638025979 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\financemanager.cpp
 	"FinanceManager.h"
 
 1637958891 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\financemanager.h

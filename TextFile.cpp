@@ -1,16 +1,16 @@
 #include "TextFile.h"
 
-CMarkup TextFile::loadFile(string fileName)
+CMarkup TextFile::loadFile()
 {
     CMarkup xml;
 
-    bool fileExists = xml.Load(fileName + ".xml");
+    bool fileExists = xml.Load(getFileName());
 
     if (!fileExists)
     {
         xml.SetDoc("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n");
         xml.AddElem(AuxiliaryMethods::changeFirstLetterForUpperCaseAndOthersForLowerCase(getFileName()));
-        cout << "Text file " << fileName << ".xml " << "was created. " << endl;
+        cout << "Text file " << getFileName() << " has been created. " << endl << endl;
         return 0;
     }
     return xml;
@@ -18,5 +18,5 @@ CMarkup TextFile::loadFile(string fileName)
 
 string TextFile::getFileName()
 {
-    return FILE_NAME;
+    return FILE_NAME + ".xml";
 }

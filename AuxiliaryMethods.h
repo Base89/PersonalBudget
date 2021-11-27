@@ -19,7 +19,7 @@ public:
     static string changeFirstLetterForUpperCaseAndOthersForLowerCase(string text);
     static char loadChar();
     static int loadInteger();
-    static string enterInputData();
+    static string loadInputData();
 };
 
 #endif

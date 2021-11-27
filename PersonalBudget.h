@@ -1,6 +1,13 @@
-#ifndef PERSONALBUDGET_H_INCLUDED
-#define PERSONALBUDGET_H_INCLUDED
+#ifndef PERSONALBUDGET_H
+#define PERSONALBUDGET_H
 
+#include <iostream>
 
+using namespace std;
 
-#endif // PERSONALBUDGET_H_INCLUDED
+class PersonalBudget
+{
+
+};
+
+#endif

@@ -100,12 +100,9 @@ int AuxiliaryMethods::loadInteger()
     return number;
 }
 
-string AuxiliaryMethods::enterInputData()
+string AuxiliaryMethods::loadInputData()
 {
     string inputData = "";
-
-    cin.ignore();
     getline(cin, inputData);
-
     return inputData;
 }

@@ -35,7 +35,7 @@ void FileWithUsers::addUserToFile(User user)
 {
     CMarkup xml;
 
-    xml = loadFile(getFileName());
+    xml = loadFile();
 
     xml.FindElem();
     xml.IntoElem();
@@ -48,7 +48,7 @@ void FileWithUsers::addUserToFile(User user)
     xml.AddElem("Surname", user.getSurname());
 
     xml.OutOfElem();
-    xml.Save(getFileName() + ".xml");
+    xml.Save(getFileName());
 }
 
 vector <User> FileWithUsers::loadUsersFromFile()
@@ -56,7 +56,7 @@ vector <User> FileWithUsers::loadUsersFromFile()
     CMarkup xml;
     vector <User> users;
 
-    xml = loadFile(getFileName());
+    xml = loadFile();
     xml.FindElem();
     xml.IntoElem();
 
@@ -74,19 +74,31 @@ void FileWithUsers::saveNewUserPassword(int loggedInUserId, string newPassword)
     CMarkup xml;
     string userId = AuxiliaryMethods::convertIntToString(loggedInUserId);
 
-    xml = loadFile(getFileName());
-
+    xml = loadFile();
     xml.FindElem();
     xml.IntoElem();
 
-     while (xml.FindElem("User"))
+    while (xml.FindElem("User"))
     {
         xml.FindChildElem("UserId");
         MCD_STR strUserId = xml.GetChildData();
 
         if (strUserId == userId)
         {
+            xml.FindChildElem("Password");
+            xml.RemoveChildElem();
+            xml.AddChildElem("Password", newPassword);
 
         }
+    }
+    if (xml.Save(getFileName()))
+    {
+        cout << "File " << getFileName() << " has been saved." << endl << endl;
+        system("pause");
+    }
+    else
+    {
+        cout << "Error! File " << getFileName() << " has not been saved." << endl << endl;
+        system("pause");
     }
 }

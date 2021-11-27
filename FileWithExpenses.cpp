@@ -50,7 +50,7 @@ bool FileWithExpenses::addExpenseToFile(Expense expense)
 {
     CMarkup xml;
 
-    xml = loadFile(getFileName());
+    xml = loadFile();
 
     xml.FindElem();
     xml.IntoElem();
@@ -63,7 +63,7 @@ bool FileWithExpenses::addExpenseToFile(Expense expense)
     xml.AddElem("Amount", expense.getAmount());
 
     xml.OutOfElem();
-    xml.Save(getFileName() + ".xml");
+    xml.Save(getFileName());
 
     lastExpenseId++;
 }
@@ -74,7 +74,7 @@ vector <Expense> FileWithExpenses::loadExpensesOfLoggedInUserFromFile(int logged
     vector <Expense> expenses;
     string userId = AuxiliaryMethods::convertIntToString(loggedInUserId);
 
-    xml = loadFile(getFileName());
+    xml = loadFile();
     xml.FindElem();
     xml.IntoElem();
 

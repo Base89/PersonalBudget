@@ -9,7 +9,7 @@ Expense ExpenseManager::getNewExpenseData()
     expense.setDate(selectDate());
 
     cout << "Enter expense source: ";
-    expense.setItem(AuxiliaryMethods::enterInputData());
+    expense.setItem(AuxiliaryMethods::loadInputData());
 
     cout << "Enter expense amount: ";
     expense.setAmount(validateAmount());

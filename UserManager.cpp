@@ -60,7 +60,7 @@ void UserManager::loginUser()
     string login, password = "";
 
     cout << endl << "Enter your login: ";
-    login = AuxiliaryMethods::enterInputData();
+    login = AuxiliaryMethods::loadInputData();
 
     vector <User>::iterator itr = users.begin();
     while (itr != users.end())
@@ -72,7 +72,7 @@ void UserManager::loginUser()
                 if (attemptsNumber < 3)
                     cout << "Remaining attempts: " << attemptsNumber << ". ";
                 cout << "Enter your password: ";
-                password = AuxiliaryMethods::enterInputData();
+                password = AuxiliaryMethods::loadInputData();
 
                 if (itr->getPassword() == password)
                 {
@@ -110,7 +110,7 @@ void UserManager::changePassword()
     string newPassword = "";
 
     cout << "Enter new password: ";
-    newPassword = AuxiliaryMethods::enterInputData();
+    newPassword = AuxiliaryMethods::loadInputData();
 
     if(isUserLoggedIn())
     {

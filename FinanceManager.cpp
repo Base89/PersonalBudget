@@ -12,7 +12,7 @@ double FinanceManager::validateAmount()
 
     while (validAmount == 0)
     {
-        strAmount = AuxiliaryMethods::enterInputData();
+        strAmount = AuxiliaryMethods::loadInputData();
 
         if (!isValidSeparated(strAmount))
         {

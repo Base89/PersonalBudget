@@ -9,7 +9,7 @@ Income IncomeManager::getNewIncomeData()
     income.setDate(selectDate());
 
     cout << "Enter income source: ";
-    income.setItem(AuxiliaryMethods::enterInputData());
+    income.setItem(AuxiliaryMethods::loadInputData());
 
     cout << "Enter income amount: ";
     income.setAmount(validateAmount());

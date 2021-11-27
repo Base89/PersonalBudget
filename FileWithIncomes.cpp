@@ -50,7 +50,7 @@ bool FileWithIncomes::addIncomeToFile(Income income)
 {
     CMarkup xml;
 
-    xml = loadFile(getFileName());
+    xml = loadFile();
 
     xml.FindElem();
     xml.IntoElem();
@@ -63,7 +63,7 @@ bool FileWithIncomes::addIncomeToFile(Income income)
     xml.AddElem("Amount", income.getAmount());
 
     xml.OutOfElem();
-    xml.Save(getFileName() + ".xml");
+    xml.Save(getFileName());
 
     lastIncomeId++;
 }
@@ -74,7 +74,7 @@ vector <Income> FileWithIncomes::loadIncomesOfLoggedInUserFromFile(int loggedInU
     vector <Income> incomes;
     string userId = AuxiliaryMethods::convertIntToString(loggedInUserId);
 
-    xml = loadFile(getFileName());
+    xml = loadFile();
     xml.FindElem();
     xml.IntoElem();
 
