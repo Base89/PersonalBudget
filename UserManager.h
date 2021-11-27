@@ -1,6 +1,38 @@
-#ifndef USERMANAGER_H_INCLUDED
-#define USERMANAGER_H_INCLUDED
+#ifndef USERMANAGER_H
+#define USERMANAGER_H
 
+#include <iostream>
+#include <vector>
 
+#include "User.h"
+#include "FileWithUsers.h"
 
-#endif // USERMANAGER_H_INCLUDED
+using namespace std;
+
+class UserManager
+{
+    int loggedInUserId;
+    vector <User> users;
+    FileWithUsers fileWithUsers;
+
+    User getNewUserData();
+    int getNewUserId();
+    bool isLoginExists();
+
+public:
+    UserManager(string fileNameWithUsers) : fileWithUsers(fileNameWithUsers)
+    {
+        loggedInUserId = 0;
+        users = fileWithUsers.loadUsersFromFile();
+    };
+
+    void registerUser();
+    void loginUser();
+    void displayAllUsers();
+    void changePassword();
+    void logoutUser();
+    bool isUserLoggedIn();
+    int getLoggedInUserId();
+};
+
+#endif

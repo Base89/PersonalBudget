@@ -23,26 +23,26 @@ void BudgetManager::displaySelectedPeriodBalanceHeader()
 
 void BudgetManager::addIncome()
 {
-    incomeManager.addIncome();
+    incomeManager->addIncome();
 }
 
 void BudgetManager::addExpense()
 {
-    expenseManager.addExpense();
+    expenseManager->addExpense();
 }
 
 void BudgetManager::displayCurrentMonthBalance()
 {
     displayCurrentMonthBalanceHeader();
-    incomeManager.displayIncomeBalanceOfCurrentMonth();
-    expenseManager.displayExpenseBalanceOfCurrentMonth();
+    incomeManager->displayIncomeBalanceOfCurrentMonth();
+    expenseManager->displayExpenseBalanceOfCurrentMonth();
 }
 
 void BudgetManager::displayPreviousMonthBalance()
 {
     displayPreviousMonthBalanceHeader();
-    incomeManager.displayIncomeBalanceOfPreviousMonth();
-    expenseManager.displayExpenseBalanceOfPreviousMonth();
+    incomeManager->displayIncomeBalanceOfPreviousMonth();
+    expenseManager->displayExpenseBalanceOfPreviousMonth();
 }
 
 void BudgetManager::displaySelectedPeriodBalance()
@@ -51,6 +51,6 @@ void BudgetManager::displaySelectedPeriodBalance()
     int lastDate = DateManager::convertDateSeparatedDashesToInt(DateManager::getUserDate());
 
     displaySelectedPeriodBalanceHeader();
-    incomeManager.displayIncomeBalanceOfSelectedPeriod(firstDate, lastDate);
-    expenseManager.displayExpenseBalanceOfSelectedPeriod(firstDate, lastDate);
+    incomeManager->displayIncomeBalanceOfSelectedPeriod(firstDate, lastDate);
+    expenseManager->displayExpenseBalanceOfSelectedPeriod(firstDate, lastDate);
 }

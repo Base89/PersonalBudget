@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1637996902 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\budgetmanager.cpp
+1637999639 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\budgetmanager.cpp
 	"BudgetManager.h"
 
 1637996719 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\expensemanager.cpp
@@ -13,7 +13,8 @@
 
 1636638359 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\personalbudget.cpp
 
-1636638443 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\usermanager.cpp
+1637997722 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\usermanager.cpp
+	"UserManager.h"
 
 1637698940 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\auxiliarymethods.cpp
 	"AuxiliaryMethods.h"
@@ -112,7 +113,7 @@
 	<ctime>
 	"AuxiliaryMethods.h"
 
-1637996346 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\budgetmanager.h
+1637999885 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\budgetmanager.h
 	<iostream>
 	"IncomeManager.h"
 	"ExpenseManager.h"
@@ -163,4 +164,10 @@
 	"FileWithExpenses.h"
 	"DateManager.h"
 	"AuxiliaryMethods.h"
+
+1637997984 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\usermanager.h
+	<iostream>
+	<vector>
+	"User.h"
+	"FileWithUsers.h"
 
