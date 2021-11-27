@@ -19,6 +19,7 @@ public:
 
     void addUserToFile(User user);
     vector <User> loadUsersFromFile();
+    void saveNewUserPassword(int loggedInUserId, string newPassword);
 };
 
 #endif

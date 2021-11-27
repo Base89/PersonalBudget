@@ -68,3 +68,25 @@ vector <User> FileWithUsers::loadUsersFromFile()
 
     return users;
 }
+
+void FileWithUsers::saveNewUserPassword(int loggedInUserId, string newPassword)
+{
+    CMarkup xml;
+    string userId = AuxiliaryMethods::convertIntToString(loggedInUserId);
+
+    xml = loadFile(getFileName());
+
+    xml.FindElem();
+    xml.IntoElem();
+
+     while (xml.FindElem("User"))
+    {
+        xml.FindChildElem("UserId");
+        MCD_STR strUserId = xml.GetChildData();
+
+        if (strUserId == userId)
+        {
+
+        }
+    }
+}

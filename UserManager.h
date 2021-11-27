@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <cstdlib>
 
 #include "User.h"
 #include "FileWithUsers.h"
@@ -17,7 +18,7 @@ class UserManager
 
     User getNewUserData();
     int getNewUserId();
-    bool isLoginExists();
+    bool isLoginExists(string login);
 
 public:
     UserManager(string fileNameWithUsers) : fileWithUsers(fileNameWithUsers)
