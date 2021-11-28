@@ -8,10 +8,12 @@
 1638026001 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\incomemanager.cpp
 	"IncomeManager.h"
 
-1637253387 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\main.cpp
+1638088356 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\main.cpp
 	<iostream>
+	"PersonalBudget.h"
 
-1636638359 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\personalbudget.cpp
+1638088235 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\personalbudget.cpp
+	"PersonalBudget.h"
 
 1638025997 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\usermanager.cpp
 	"UserManager.h"
@@ -171,4 +173,12 @@
 	<cstdlib>
 	"User.h"
 	"FileWithUsers.h"
+
+1638087478 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\personalbudget.h
+	<iostream>
+	"UserManager.h"
+	"BudgetManager.h"
+	"FileWithUsers.h"
+	"FileWithExpenses.h"
+	"FileWithIncomes.h"
 
