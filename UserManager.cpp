@@ -79,7 +79,7 @@ void UserManager::loginUser()
             for (int attemptsNumber = 3; attemptsNumber > 0; attemptsNumber-- )
             {
                 if (attemptsNumber < 3)
-                    cout << "Remaining attempts: " << attemptsNumber << ". ";
+                    cout << "Remaining attempts: " << attemptsNumber << endl;
                 cout << "Enter your password: ";
                 password = AuxiliaryMethods::loadInputData();
 

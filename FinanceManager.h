@@ -13,7 +13,6 @@ using namespace std;
 
 class FinanceManager
 {
-    int getLoggedInUserId();
     bool isValidSeparated(string amount);
     bool isGreaterThanZero(string amount);
     bool isAmountDigit(string amount);

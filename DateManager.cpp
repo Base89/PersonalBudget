@@ -179,13 +179,13 @@ string DateManager::getUserDate()
 {
     string year, month, day = "";
 
-    cout << endl << "Enter year : ";
+    cout << "Enter year : ";
     year = validateYear();
 
-    cout << endl << "Enter month : ";
+    cout << "Enter month : ";
     month = validateMonth();
 
-    cout << endl << "Enter day : ";
+    cout << "Enter day : ";
     day = validateDay(year, month);
 
     return year + '-' + convertDateToDoubleDigit(month) + '-' + convertDateToDoubleDigit(day);

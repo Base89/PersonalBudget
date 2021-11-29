@@ -18,12 +18,12 @@ class FileWithIncomes : public TextFile
     int getLastIncomeIdFromFile(CMarkup xml);
 
 public:
-    FileWithIncomes(string fileName) : TextFile (fileName)
+    FileWithIncomes(string fileNameWithIncomes) : TextFile (fileNameWithIncomes)
     {
         lastIncomeId = 0;
     }
 
-    bool addIncomeToFile(Income income);
+    void addIncomeToFile(Income income);
     vector <Income> loadIncomesOfLoggedInUserFromFile(int loggedInUserId);
     int getLastIncomeId();
 };

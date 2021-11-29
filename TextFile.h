@@ -2,6 +2,7 @@
 #define TEXTFILE_H
 
 #include <iostream>
+#include <string>
 
 #include "Markup.h"
 #include "AuxiliaryMethods.h"
@@ -17,6 +18,7 @@ public:
 
     CMarkup loadFile();
     string getFileName();
+    string getFileNameWithoutDot(string fileNameWithDot);
 
 };
 

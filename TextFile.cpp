@@ -8,11 +8,11 @@ CMarkup TextFile::loadFile()
 
     if (!fileExists)
     {
-        xml.SetDoc("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n");
-        xml.AddElem(AuxiliaryMethods::changeFirstLetterForUpperCaseAndOthersForLowerCase(getFileName()));
+        xml.SetDoc( "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n" );
+        xml.AddElem(AuxiliaryMethods::changeFirstLetterForUpperCaseAndOthersForLowerCase(getFileNameWithoutDot(getFileName())));
         xml.Save(getFileName());
 
-        cout << endl << "Text file " << getFileName() << " has been created. " << endl;
+        cout << "Text file " << getFileName() << " has been created. " << endl << endl;
         return 0;
     }
     return xml;
@@ -21,4 +21,13 @@ CMarkup TextFile::loadFile()
 string TextFile::getFileName()
 {
     return FILE_NAME;
+}
+
+string TextFile::getFileNameWithoutDot(string fileNameWithDot)
+{
+    string fileNameWithoutDot = "";
+    istringstream iss(fileNameWithDot);
+
+    getline(iss, fileNameWithoutDot, '.');
+    return fileNameWithoutDot;
 }

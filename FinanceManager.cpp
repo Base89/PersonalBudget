@@ -1,10 +1,5 @@
 #include "FinanceManager.h"
 
-int FinanceManager::getLoggedInUserId()
-{
-
-}
-
 double FinanceManager::validateAmount()
 {
     bool validAmount = 0;
@@ -19,20 +14,21 @@ double FinanceManager::validateAmount()
             cout << "Entered amount is incorrect. Type amount with one float separator." << endl << "Try again : ";
             validAmount = 0;
         }
-
-        if (!isGreaterThanZero(strAmount))
+        else if (!isGreaterThanZero(strAmount))
         {
             cout << "Entered amount is incorrect. Type amount greater than zero." << endl << "Try again : ";
             validAmount = 0;
         }
-
-        if (!isAmountDigit(strAmount))
+        else if (!isAmountDigit(strAmount))
         {
             cout << "Entered amount is incorrect. Type amount in digits." << endl << "Try again : ";
             validAmount = 0;
         }
         else
+        {
             strAmount = AuxiliaryMethods::changeCommaForDot(saveTwoDecimalPlaces(strAmount));
+            validAmount = 1;
+        }
     }
     return AuxiliaryMethods::convertStringToDouble(strAmount);
 }
@@ -84,8 +80,8 @@ bool FinanceManager::isGreaterThanZero(string amount)
 
     if (doubleAmount <= 0)
         return 0;
-
-    return 1;
+    else
+        return 1;
 }
 
 bool FinanceManager::isAmountDigit(string amount)
@@ -134,14 +130,9 @@ int FinanceManager::selectDate()
         }
         else if (choice == '2')
         {
-            cout << "Please, enter your date:";
+            cout << "Please, enter your date:" << endl;
             date = DateManager::convertDateSeparatedDashesToInt(DateManager::getUserDate());
             dateMenu = 1;
-        }
-        else if (choice == '9')
-        {
-            cout << endl << "Back to User Menu" << endl << endl;
-            break;
         }
         else
         {
@@ -156,7 +147,6 @@ char FinanceManager::selectOptionFromDateMenu()
 {
     cout << "1 - Today's date" << endl;
     cout << "2 - Other date" << endl;
-    cout << "9 - Back " << endl;
     cout << endl << "Your choice: ";
 
     return AuxiliaryMethods::loadChar();

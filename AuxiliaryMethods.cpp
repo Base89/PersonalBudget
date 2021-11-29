@@ -103,6 +103,9 @@ int AuxiliaryMethods::loadInteger()
 string AuxiliaryMethods::loadInputData()
 {
     string inputData = "";
+
+    cin.clear();
     getline(cin, inputData);
+
     return inputData;
 }

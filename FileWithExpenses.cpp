@@ -46,7 +46,7 @@ int FileWithExpenses::getLastExpenseIdFromFile(CMarkup xml)
     return AuxiliaryMethods::convertStringToInt(strExpenseId);
 }
 
-bool FileWithExpenses::addExpenseToFile(Expense expense)
+void FileWithExpenses::addExpenseToFile(Expense expense)
 {
     CMarkup xml;
 

@@ -64,8 +64,6 @@ vector <User> FileWithUsers::loadUsersFromFile()
     {
         users.push_back(getUserData(xml));
     }
-    cout << "Loaded users from file. " << endl;
-    system("pause");
     return users;
 }
 

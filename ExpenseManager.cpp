@@ -8,6 +8,7 @@ Expense ExpenseManager::getNewExpenseData()
     expense.setUserId(LOGGED_IN_USER_ID);
     expense.setDate(selectDate());
 
+    cin.ignore();
     cout << "Enter expense source: ";
     expense.setItem(AuxiliaryMethods::loadInputData());
 
@@ -102,10 +103,9 @@ void ExpenseManager::addExpense()
     expense = getNewExpenseData();
 
     expenses.push_back(expense);
-    if (fileWithExpenses.addExpenseToFile(expense))
-        cout << "New expense has been added." << endl;
-    else
-        cout << "Error! New expense has not been added." << endl;
+    fileWithExpenses.addExpenseToFile(expense);
+    cout << "New expense has been added." << endl;
+
     system("pause");
 }
 
@@ -118,7 +118,6 @@ void ExpenseManager::displayExpenseBalanceOfCurrentMonth()
     currentMonthExpenses = searchExpensesBySelectedPeriod(firstDate, lastDate);
     displayAllExpenses(currentMonthExpenses);
     displayExpensesSum(currentMonthExpenses);
-    system("pause");
 }
 
 void ExpenseManager::displayExpenseBalanceOfPreviousMonth()
@@ -130,7 +129,6 @@ void ExpenseManager::displayExpenseBalanceOfPreviousMonth()
     previousMonthExpenses = searchExpensesBySelectedPeriod(firstDate, lastDate);
     displayAllExpenses(previousMonthExpenses);
     displayExpensesSum(previousMonthExpenses);
-    system("pause");
 }
 
 void ExpenseManager::displayExpenseBalanceOfSelectedPeriod(int firstDate, int lastDate)
@@ -140,5 +138,4 @@ void ExpenseManager::displayExpenseBalanceOfSelectedPeriod(int firstDate, int la
     selectedPeriodExpenses = searchExpensesBySelectedPeriod(firstDate, lastDate);
     displayAllExpenses(selectedPeriodExpenses);
     displayExpensesSum(selectedPeriodExpenses);
-    system("pause");
 }

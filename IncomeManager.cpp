@@ -8,6 +8,7 @@ Income IncomeManager::getNewIncomeData()
     income.setUserId(LOGGED_IN_USER_ID);
     income.setDate(selectDate());
 
+    cin.ignore();
     cout << "Enter income source: ";
     income.setItem(AuxiliaryMethods::loadInputData());
 
@@ -100,12 +101,10 @@ void IncomeManager::addIncome()
     system("cls");
     cout << " >>> ADDING NEW INCOME <<<" << endl << endl;
     income = getNewIncomeData();
-
     incomes.push_back(income);
-    if (fileWithIncomes.addIncomeToFile(income))
-        cout << "New income has been added." << endl;
-    else
-        cout << "Error! New income has not been added." << endl;
+    fileWithIncomes.addIncomeToFile(income);
+    cout << "New income has been added." << endl;
+
     system("pause");
 }
 
@@ -118,7 +117,6 @@ void IncomeManager::displayIncomeBalanceOfCurrentMonth()
     currentMonthIncomes = searchIncomesBySelectedPeriod(firstDate, lastDate);
     displayAllIncomes(currentMonthIncomes);
     displayIncomesSum(currentMonthIncomes);
-    system("pause");
 }
 
 void IncomeManager::displayIncomeBalanceOfPreviousMonth()
@@ -130,7 +128,6 @@ void IncomeManager::displayIncomeBalanceOfPreviousMonth()
     previousMonthIncomes = searchIncomesBySelectedPeriod(firstDate, lastDate);
     displayAllIncomes(previousMonthIncomes);
     displayIncomesSum(previousMonthIncomes);
-    system("pause");
 }
 
 void IncomeManager::displayIncomeBalanceOfSelectedPeriod(int firstDate, int lastDate)
@@ -140,5 +137,4 @@ void IncomeManager::displayIncomeBalanceOfSelectedPeriod(int firstDate, int last
     selectedPeriodIncomes = searchIncomesBySelectedPeriod(firstDate, lastDate);
     displayAllIncomes(selectedPeriodIncomes);
     displayIncomesSum(selectedPeriodIncomes);
-    system("pause");
 }

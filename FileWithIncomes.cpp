@@ -46,7 +46,7 @@ int FileWithIncomes::getLastIncomeIdFromFile(CMarkup xml)
     return AuxiliaryMethods::convertStringToInt(strIncomeId);
 }
 
-bool FileWithIncomes::addIncomeToFile(Income income)
+void FileWithIncomes::addIncomeToFile(Income income)
 {
     CMarkup xml;
 

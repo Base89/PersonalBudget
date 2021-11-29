@@ -18,12 +18,12 @@ class FileWithExpenses : public TextFile
     int getLastExpenseIdFromFile(CMarkup xml);
 
 public:
-    FileWithExpenses(string fileName) : TextFile (fileName)
+    FileWithExpenses(string fileNameWithExpenses) : TextFile (fileNameWithExpenses)
     {
         lastExpenseId = 0;
     }
 
-    bool addExpenseToFile(Expense expense);
+    void addExpenseToFile(Expense expense);
     vector <Expense> loadExpensesOfLoggedInUserFromFile(int loggedInUserId);
     int getLastExpenseId();
 };

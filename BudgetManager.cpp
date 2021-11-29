@@ -36,6 +36,7 @@ void BudgetManager::displayCurrentMonthBalance()
     displayCurrentMonthBalanceHeader();
     incomeManager->displayIncomeBalanceOfCurrentMonth();
     expenseManager->displayExpenseBalanceOfCurrentMonth();
+    system("pause");
 }
 
 void BudgetManager::displayPreviousMonthBalance()
@@ -43,14 +44,18 @@ void BudgetManager::displayPreviousMonthBalance()
     displayPreviousMonthBalanceHeader();
     incomeManager->displayIncomeBalanceOfPreviousMonth();
     expenseManager->displayExpenseBalanceOfPreviousMonth();
+    system("pause");
 }
 
 void BudgetManager::displaySelectedPeriodBalance()
 {
+    cout << endl << "Enter starting date: " << endl;
     int firstDate = DateManager::convertDateSeparatedDashesToInt(DateManager::getUserDate());
+    cout << endl << "Enter ending date: " << endl;
     int lastDate = DateManager::convertDateSeparatedDashesToInt(DateManager::getUserDate());
 
     displaySelectedPeriodBalanceHeader();
     incomeManager->displayIncomeBalanceOfSelectedPeriod(firstDate, lastDate);
     expenseManager->displayExpenseBalanceOfSelectedPeriod(firstDate, lastDate);
+    system("pause");
 }

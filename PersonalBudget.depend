@@ -1,24 +1,24 @@
 # depslib dependency file v1.0
-1637999639 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\budgetmanager.cpp
+1638217857 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\budgetmanager.cpp
 	"BudgetManager.h"
 
-1638025986 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\expensemanager.cpp
+1638211496 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\expensemanager.cpp
 	"ExpenseManager.h"
 
-1638026001 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\incomemanager.cpp
+1638218627 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\incomemanager.cpp
 	"IncomeManager.h"
 
-1638167332 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\main.cpp
+1638205510 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\main.cpp
 	<iostream>
 	"PersonalBudget.h"
 
 1638088235 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\personalbudget.cpp
 	"PersonalBudget.h"
 
-1638166869 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\usermanager.cpp
+1638216174 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\usermanager.cpp
 	"UserManager.h"
 
-1638025947 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\auxiliarymethods.cpp
+1638218691 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\auxiliarymethods.cpp
 	"AuxiliaryMethods.h"
 
 1636748982 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\date.cpp
@@ -27,7 +27,7 @@
 1636694806 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\date.h
 	<iostream>
 
-1637952831 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\datemanager.cpp
+1638218677 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\datemanager.cpp
 	"DateManager.h"
 
 1636750323 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\expense.cpp
@@ -42,7 +42,7 @@
 1636749890 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\income.cpp
 	"Income.h"
 
-1638167332 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\textfile.cpp
+1638206825 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\textfile.cpp
 	"TextFile.h"
 
 1636696058 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\user.cpp
@@ -65,13 +65,13 @@
 	<iostream>
 	"Finance.h"
 
-1638025498 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithexpenses.cpp
+1638211327 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithexpenses.cpp
 	"FileWithExpenses.h"
 
-1638025515 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithincomes.cpp
+1638211327 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithincomes.cpp
 	"FileWithIncomes.h"
 
-1638166672 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithusers.cpp
+1638208370 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithusers.cpp
 	"FileWithUsers.h"
 
 1637692982 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\markup.cpp
@@ -88,21 +88,22 @@
 	<string>
 	<afx.h>
 
-1638025439 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\textfile.h
+1638206697 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\textfile.h
 	<iostream>
+	<string>
 	"Markup.h"
 	"AuxiliaryMethods.h"
 
-1638025959 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\auxiliarymethods.h
+1638205510 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\auxiliarymethods.h
 	<iostream>
 	<string>
 	<sstream>
 	<algorithm>
 
-1638025979 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\financemanager.cpp
+1638217958 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\financemanager.cpp
 	"FinanceManager.h"
 
-1637958891 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\financemanager.h
+1638215950 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\financemanager.h
 	<iostream>
 	<string>
 	<cctype>
@@ -129,14 +130,14 @@
 	"TextFile.h"
 	"AuxiliaryMethods.h"
 
-1637907996 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithincomes.h
+1638211345 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithincomes.h
 	<iostream>
 	<vector>
 	"Income.h"
 	"TextFile.h"
 	"AuxiliaryMethods.h"
 
-1637996069 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\incomemanager.h
+1638212070 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\incomemanager.h
 	<iostream>
 	<string>
 	<vector>
@@ -148,7 +149,7 @@
 	"DateManager.h"
 	"AuxiliaryMethods.h"
 
-1637908028 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithexpenses.h
+1638211345 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithexpenses.h
 	<iostream>
 	<vector>
 	"Expense.h"
