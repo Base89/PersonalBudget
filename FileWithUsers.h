@@ -15,7 +15,7 @@ class FileWithUsers : public TextFile
     User getUserData(CMarkup xml);
 
 public:
-    FileWithUsers(string fileName) : TextFile(fileName) {}
+    FileWithUsers(string fileNameWithUsers) : TextFile(fileNameWithUsers) {}
 
     void addUserToFile(User user);
     vector <User> loadUsersFromFile();

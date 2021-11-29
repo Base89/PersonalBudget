@@ -8,14 +8,14 @@
 1638026001 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\incomemanager.cpp
 	"IncomeManager.h"
 
-1638088356 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\main.cpp
+1638167332 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\main.cpp
 	<iostream>
 	"PersonalBudget.h"
 
 1638088235 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\personalbudget.cpp
 	"PersonalBudget.h"
 
-1638025997 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\usermanager.cpp
+1638166869 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\usermanager.cpp
 	"UserManager.h"
 
 1638025947 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\auxiliarymethods.cpp
@@ -42,7 +42,7 @@
 1636749890 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\income.cpp
 	"Income.h"
 
-1638025677 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\textfile.cpp
+1638167332 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\textfile.cpp
 	"TextFile.h"
 
 1636696058 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\user.cpp
@@ -71,7 +71,7 @@
 1638025515 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithincomes.cpp
 	"FileWithIncomes.h"
 
-1638025791 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithusers.cpp
+1638166672 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithusers.cpp
 	"FileWithUsers.h"
 
 1637692982 source:c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\markup.cpp
@@ -122,7 +122,7 @@
 	"FileWithIncomes.h"
 	"FileWithExpenses.h"
 
-1638004786 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithusers.h
+1638167176 c:\users\gabriel\desktop\moje_it\przyszlyprogramista\naukac++\projects\personalbudget\filewithusers.h
 	<iostream>
 	<vector>
 	"User.h"

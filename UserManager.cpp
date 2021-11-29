@@ -9,15 +9,24 @@ User UserManager::getNewUserData()
 
     do
     {
-        cout << "Enter login: ";
+        cout << endl << "Enter login: ";
         cin >> login;
         user.setLogin(login);
     }
     while (isLoginExists(user.getLogin()) == true);
 
-    string password;
+    string password, name, surname;
     cout << "Enter password: ";
+    cin >> password;
     user.setPassword(password);
+
+    cout << "Enter name: ";
+    cin >> name;
+    user.setName(name);
+
+    cout << "Enter surname: ";
+    cin >> surname;
+    user.setSurname(surname);
 
     return user;
 }
@@ -103,6 +112,7 @@ void UserManager::displayAllUsers()
         cout << users[i].getName() << endl;
         cout << users[i].getSurname() << endl;
     }
+    system("pause");
 }
 
 void UserManager::changePassword()

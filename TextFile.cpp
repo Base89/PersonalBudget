@@ -10,7 +10,9 @@ CMarkup TextFile::loadFile()
     {
         xml.SetDoc("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n");
         xml.AddElem(AuxiliaryMethods::changeFirstLetterForUpperCaseAndOthersForLowerCase(getFileName()));
-        cout << "Text file " << getFileName() << " has been created. " << endl << endl;
+        xml.Save(getFileName());
+
+        cout << endl << "Text file " << getFileName() << " has been created. " << endl;
         return 0;
     }
     return xml;
@@ -18,5 +20,5 @@ CMarkup TextFile::loadFile()
 
 string TextFile::getFileName()
 {
-    return FILE_NAME + ".xml";
+    return FILE_NAME;
 }
