@@ -41,9 +41,9 @@ double ExpenseManager::sumExpenses(vector <Expense> selectedExpenses)
 void ExpenseManager::displayExpense(Expense expense)
 {
     cout << endl << "Expense ID:         " << expense.getExpenseId() << endl;
-    cout << "Date Expense:       " << expense.getDate() << endl;
+    cout << "Date Expense:       " << DateManager::convertIntDateToDateWithDashes(expense.getDate()) << endl;
     cout << "Source Expense:     " << expense.getItem() << endl;
-    cout << "Amount:            " << fixed << setprecision(2) << expense.getAmount() << endl;
+    cout << "Amount:             " << fixed << setprecision(2) << expense.getAmount() << endl;
 }
 
 void ExpenseManager::displayAllExpenses(vector <Expense> selectedExpenses)

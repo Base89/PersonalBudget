@@ -98,6 +98,7 @@ string FinanceManager::saveTwoDecimalPlaces(string amount)
 {
     const string COMMA = ",";
     const string DOT = ".";
+    const string TWO_DECIMAL_PLACES = ".00";
     int position = 0;
 
     position = amount.find(COMMA);
@@ -105,7 +106,10 @@ string FinanceManager::saveTwoDecimalPlaces(string amount)
     {
         position = 0;
         position = amount.find(DOT);
-        return amount.substr (0, position + 3);
+        if (position != string::npos)
+            return amount.substr (0, position + 3);
+        else
+            return amount += TWO_DECIMAL_PLACES;
     }
     else
         return amount.substr (0, position + 3);

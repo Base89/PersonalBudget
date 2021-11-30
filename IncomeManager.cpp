@@ -41,7 +41,7 @@ double IncomeManager::sumIncomes(vector <Income> selectedIncomes)
 void IncomeManager::displayIncome(Income income)
 {
     cout << endl << "Income ID:         " << income.getIncomeId() << endl;
-    cout << "Date Income:       " << income.getDate() << endl;
+    cout << "Date Income:       " << DateManager::convertIntDateToDateWithDashes(income.getDate()) << endl;
     cout << "Source Income:     " << income.getItem() << endl;
     cout << "Amount:            " << fixed << setprecision(2) << income.getAmount() << endl;
 }

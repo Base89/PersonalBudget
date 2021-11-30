@@ -13,7 +13,6 @@ class DateManager
     static const int AMOUNT_MONTH_DAYS[][13];
 
     static bool isYearLeap(int year);
-    static string convertIntDateToDateWithDashes(int intDate);
     static string convertDateToDoubleDigit(string inputDate);
     static bool isDateDigits(string enteredDate);
     static string validateYear();
@@ -29,6 +28,7 @@ public:
 
     static string getCurrentDate();
     static string getUserDate();
+    static string convertIntDateToDateWithDashes(int intDate);
     static int convertDateSeparatedDashesToInt(string dateWithDashes);
     static string getFirstDayOfMonth(string currentDateWithDashes);
     static string getFirstDayOfPreviousMonth();

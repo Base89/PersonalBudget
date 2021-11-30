@@ -16,7 +16,7 @@ Expense FileWithExpenses::getExpenseData(CMarkup xml)
 
     xml.FindElem("Date");
     MCD_STR strDate = xml.GetData();
-    expense.setDate(AuxiliaryMethods::convertStringToInt(strDate));
+    expense.setDate(DateManager::convertDateSeparatedDashesToInt(strDate));
 
     xml.FindElem("Item");
     MCD_STR strItem = xml.GetData();
@@ -58,7 +58,7 @@ void FileWithExpenses::addExpenseToFile(Expense expense)
     xml.IntoElem();
     xml.AddElem("ExpenseId", expense.getExpenseId());
     xml.AddElem("UserId", expense.getUserId());
-    xml.AddElem("Date", expense.getDate());
+    xml.AddElem("Date", DateManager::convertIntDateToDateWithDashes(expense.getDate()));
     xml.AddElem("Item", expense.getItem());
     xml.AddElem("Amount", AuxiliaryMethods::convertDoubleToString(expense.getAmount()));
 
