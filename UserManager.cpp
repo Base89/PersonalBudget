@@ -86,8 +86,6 @@ void UserManager::loginUser()
                 if (itr->getPassword() == password)
                 {
                     loggedInUserId = itr->getId();
-                    cout << endl << "You have logged in! " << endl << endl;
-                    system ("pause");
                     return;
                 }
             }

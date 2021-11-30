@@ -18,6 +18,7 @@ using namespace std;
 class ExpenseManager : public FinanceManager
 {
     const int LOGGED_IN_USER_ID;
+    double sumSelectedExpenses;
     vector <Expense> expenses;
     FileWithExpenses fileWithExpenses;
 
@@ -30,6 +31,8 @@ class ExpenseManager : public FinanceManager
     void displayAmountOfExpenses(int amountExpenses);
     vector <Expense> searchExpensesBySelectedPeriod(int startingDate, int closingDate);
 
+    void setSumSelectedExpenses(double newSumSelectedExpenses);
+
 public:
     ExpenseManager(string fileNameWithExpenses, int loggedInUserId) : fileWithExpenses(fileNameWithExpenses), LOGGED_IN_USER_ID(loggedInUserId)
     {
@@ -40,6 +43,8 @@ public:
     void displayExpenseBalanceOfCurrentMonth();
     void displayExpenseBalanceOfPreviousMonth();
     void displayExpenseBalanceOfSelectedPeriod(int firstDate, int lastDate);
+
+    double getSumSelectedExpenses();
 };
 
 #endif

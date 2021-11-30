@@ -34,6 +34,7 @@ double ExpenseManager::sumExpenses(vector <Expense> selectedExpenses)
     {
         total += selectedExpenses[i].getAmount();
     }
+    setSumSelectedExpenses(total);
     return total;
 }
 
@@ -138,4 +139,14 @@ void ExpenseManager::displayExpenseBalanceOfSelectedPeriod(int firstDate, int la
     selectedPeriodExpenses = searchExpensesBySelectedPeriod(firstDate, lastDate);
     displayAllExpenses(selectedPeriodExpenses);
     displayExpensesSum(selectedPeriodExpenses);
+}
+
+void ExpenseManager::setSumSelectedExpenses(double newSumSelectedExpenses)
+{
+    sumSelectedExpenses = newSumSelectedExpenses;
+}
+
+double ExpenseManager::getSumSelectedExpenses()
+{
+    return sumSelectedExpenses;
 }

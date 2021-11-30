@@ -10,8 +10,6 @@ int main()
 
     PersonalBudget personalBudget("users.xml", "expenses.xml", "incomes.xml");
 
-    //personalBudget.displayAllUsers();
-
     while (true)
     {
         if (personalBudget.isUserLoggedIn())
@@ -25,9 +23,6 @@ int main()
                 break;
             case '2':
                 personalBudget.loginUser();
-                break;
-            case '3':
-                personalBudget.displayAllUsers();
                 break;
             case '9':
                 exit(0);

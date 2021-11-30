@@ -18,6 +18,7 @@ using namespace std;
 class IncomeManager : public FinanceManager
 {
     const int LOGGED_IN_USER_ID;
+    double sumSelectedIncomes;
     vector <Income> incomes;
     FileWithIncomes fileWithIncomes;
 
@@ -30,6 +31,8 @@ class IncomeManager : public FinanceManager
     void displayAmountOfIncomes(int amountIncomes);
     vector <Income> searchIncomesBySelectedPeriod(int startingDate, int closingDate);
 
+    void setSumSelectedIncomes(double newSumSelectedIncomes);
+
 public:
     IncomeManager(string fileNameWithIncomes, int loggedInUserId) : fileWithIncomes(fileNameWithIncomes), LOGGED_IN_USER_ID(loggedInUserId)
     {
@@ -40,6 +43,8 @@ public:
     void displayIncomeBalanceOfCurrentMonth();
     void displayIncomeBalanceOfPreviousMonth();
     void displayIncomeBalanceOfSelectedPeriod(int firstDate, int lastDate);
+
+    double getSumSelectedIncomes();
 };
 
 #endif

@@ -34,6 +34,7 @@ double IncomeManager::sumIncomes(vector <Income> selectedIncomes)
     {
         total += selectedIncomes[i].getAmount();
     }
+    setSumSelectedIncomes(total);
     return total;
 }
 
@@ -137,4 +138,14 @@ void IncomeManager::displayIncomeBalanceOfSelectedPeriod(int firstDate, int last
     selectedPeriodIncomes = searchIncomesBySelectedPeriod(firstDate, lastDate);
     displayAllIncomes(selectedPeriodIncomes);
     displayIncomesSum(selectedPeriodIncomes);
+}
+
+void IncomeManager::setSumSelectedIncomes(double newSumSelectedIncomes)
+{
+    sumSelectedIncomes = newSumSelectedIncomes;
+}
+
+double IncomeManager::getSumSelectedIncomes()
+{
+    return sumSelectedIncomes;
 }
