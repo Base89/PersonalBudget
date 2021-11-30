@@ -60,7 +60,7 @@ void FileWithExpenses::addExpenseToFile(Expense expense)
     xml.AddElem("UserId", expense.getUserId());
     xml.AddElem("Date", expense.getDate());
     xml.AddElem("Item", expense.getItem());
-    xml.AddElem("Amount", expense.getAmount());
+    xml.AddElem("Amount", AuxiliaryMethods::convertDoubleToString(expense.getAmount()));
 
     xml.OutOfElem();
     xml.Save(getFileName());

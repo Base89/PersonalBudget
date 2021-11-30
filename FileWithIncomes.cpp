@@ -60,7 +60,7 @@ void FileWithIncomes::addIncomeToFile(Income income)
     xml.AddElem("UserId", income.getUserId());
     xml.AddElem("Date", income.getDate());
     xml.AddElem("Item", income.getItem());
-    xml.AddElem("Amount", income.getAmount());
+    xml.AddElem("Amount", AuxiliaryMethods::convertDoubleToString(income.getAmount()));
 
     xml.OutOfElem();
     xml.Save(getFileName());
