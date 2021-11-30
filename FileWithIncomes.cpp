@@ -33,13 +33,13 @@ Income FileWithIncomes::getIncomeData(CMarkup xml)
 
 int FileWithIncomes::getLastIncomeIdFromFile(CMarkup xml)
 {
+    xml.ResetPos();
     xml.FindElem();
     xml.IntoElem();
 
     while (xml.FindElem("Income")) {}
 
     xml.IntoElem();
-
     xml.FindElem("IncomeId");
     MCD_STR strIncomeId = xml.GetData();
 

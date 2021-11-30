@@ -33,13 +33,13 @@ Expense FileWithExpenses::getExpenseData(CMarkup xml)
 
 int FileWithExpenses::getLastExpenseIdFromFile(CMarkup xml)
 {
+    xml.ResetPos();
     xml.FindElem();
     xml.IntoElem();
 
     while (xml.FindElem("Expense")) {}
 
     xml.IntoElem();
-
     xml.FindElem("ExpenseId");
     MCD_STR strExpenseId = xml.GetData();
 
