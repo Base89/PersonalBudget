@@ -11,17 +11,17 @@ double FinanceManager::validateAmount()
 
         if (!isValidSeparated(strAmount))
         {
-            cout << "Entered amount is incorrect. Type amount with one float separator." << endl << "Try again : ";
+            cout << "Entered amount is incorrect. Type amount with one float separator." << endl << "Try again: ";
             validAmount = 0;
         }
         else if (!isGreaterThanZero(strAmount))
         {
-            cout << "Entered amount is incorrect. Type amount greater than zero." << endl << "Try again : ";
+            cout << "Entered amount is incorrect. Type amount greater than zero." << endl << "Try again: ";
             validAmount = 0;
         }
         else if (!isAmountDigit(strAmount))
         {
-            cout << "Entered amount is incorrect. Type amount in digits." << endl << "Try again : ";
+            cout << "Entered amount is incorrect. Type amount in digits." << endl << "Try again: ";
             validAmount = 0;
         }
         else

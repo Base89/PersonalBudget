@@ -8,7 +8,6 @@ Income IncomeManager::getNewIncomeData()
     income.setUserId(LOGGED_IN_USER_ID);
     income.setDate(selectDate());
 
-    cin.ignore();
     cout << "Enter income source: ";
     income.setItem(AuxiliaryMethods::loadInputData());
 

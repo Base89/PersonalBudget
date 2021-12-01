@@ -111,7 +111,7 @@ string DateManager::typeDate()
 
     while (digitalDate == 0)
     {
-        cin >> inputDate;
+        getline(cin, inputDate);
         digitalDate = isDateDigits(inputDate);
     }
     return inputDate;

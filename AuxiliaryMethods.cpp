@@ -78,7 +78,7 @@ char AuxiliaryMethods::loadChar()
             character = input[0];
             break;
         }
-        cout << "This is not a single character. Type again. " << endl;
+        cout << "This is not a single character. Type again: ";
     }
     return character;
 }
@@ -95,17 +95,21 @@ int AuxiliaryMethods::loadInteger()
         stringstream myStream(input);
         if (myStream >> number)
             break;
-        cout << "This is not a number. Type again. " << endl;
+        cout << "This is not a number. Type again: ";
     }
     return number;
 }
 
 string AuxiliaryMethods::loadInputData()
 {
-    string inputData = "";
+    string input = "";
 
-    cin.clear();
-    getline(cin, inputData);
-
-    return inputData;
+    getline(cin, input);
+    while(!cin)
+    {
+        cin.clear();
+        cin.ignore(160, 'n');
+        getline(cin, input);
+    }
+    return input;
 }

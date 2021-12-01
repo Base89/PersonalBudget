@@ -8,7 +8,6 @@ Expense ExpenseManager::getNewExpenseData()
     expense.setUserId(LOGGED_IN_USER_ID);
     expense.setDate(selectDate());
 
-    cin.ignore();
     cout << "Enter expense source: ";
     expense.setItem(AuxiliaryMethods::loadInputData());
 
