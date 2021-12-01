@@ -20,7 +20,6 @@ Expense ExpenseManager::getNewExpenseData()
 vector <Expense> ExpenseManager::sortExpensesFromEldest(vector <Expense> selectedExpenses)
 {
     vector <Expense> sortedExpenses;
-
     sort(expenses.begin(), expenses.end());
 
     return sortedExpenses;
@@ -34,6 +33,7 @@ double ExpenseManager::sumExpenses(vector <Expense> selectedExpenses)
         total += selectedExpenses[i].getAmount();
     }
     setSumSelectedExpenses(total);
+
     return total;
 }
 

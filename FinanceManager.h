@@ -16,13 +16,10 @@ class FinanceManager
     bool isValidSeparated(string amount);
     bool isGreaterThanZero(string amount);
     bool isAmountDigit(string amount);
-    string saveTwoDecimalPlaces(string amount);
-    char selectOptionFromDateMenu();
 
 protected:
     int selectDate();
     double validateAmount();
-    double setPrecisionToTwoDecimalPlaces(double doubleNumber);
 };
 
 #endif

@@ -13,7 +13,7 @@ CMarkup TextFile::loadFile()
         xml.Save(getFileName());
 
         cout << "Text file " << getFileName() << " has been created. " << endl << endl;
-        return 0;
+        system ("pause");
     }
     return xml;
 }

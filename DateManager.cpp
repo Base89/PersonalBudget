@@ -32,7 +32,7 @@ bool DateManager::isDateDigits(string enteredDate)
 {
     for (int charPosition = 0; charPosition < enteredDate.length(); charPosition++)
     {
-        if (isdigit(enteredDate[charPosition]) == false)
+        if (!isdigit(enteredDate[charPosition]))
         {
             cout << "Entered date is not number. Type the date in digits." << endl << "Try again : ";
             return false;
@@ -43,7 +43,7 @@ bool DateManager::isDateDigits(string enteredDate)
 
 string DateManager::validateYear()
 {
-    const int borderYear = 2000;
+    const int BORDER_YEAR = 2000;
     bool validYear = 0;
     int intYear = 0;
 
@@ -51,7 +51,7 @@ string DateManager::validateYear()
     {
         intYear = AuxiliaryMethods::convertStringToInt(typeDate());
 
-        if ((intYear < borderYear))
+        if ((intYear < BORDER_YEAR))
         {
             cout << "Entered year is below the range. Type year above 1999." << endl << "Try again : ";
             validYear = 0;
@@ -64,7 +64,7 @@ string DateManager::validateYear()
 
 string DateManager::validateMonth()
 {
-    const int amountMonths = 12;
+    const int AMOUNT_MONTHS = 12;
     bool validMonth = 0;
     int intMonth = 0;
 
@@ -72,7 +72,7 @@ string DateManager::validateMonth()
     {
         intMonth = AuxiliaryMethods::convertStringToInt(typeDate());
 
-        if ((intMonth < 1) || (intMonth > amountMonths))
+        if ((intMonth < 1) || (intMonth > AMOUNT_MONTHS))
         {
             cout << "Entered month is out of range. Type valid month number (1-12)." << endl << "Try again : ";
             validMonth = 0;
@@ -119,12 +119,12 @@ string DateManager::typeDate()
 
 string DateManager::getYearFromDate(string selectedDate)
 {
-    const int dateDigits = 8;
+    const int YEAR_DIGITS = 4;
     string year = "";
 
-    for (int i = 0; i < dateDigits; i++)
+    for (int i = 0; i < DATE_DIGITS; i++)
     {
-        if (i <= 3)
+        if (i < YEAR_DIGITS)
         {
             year += selectedDate[i];
         }
@@ -134,12 +134,12 @@ string DateManager::getYearFromDate(string selectedDate)
 
 string DateManager::getMonthFromDate(string selectedDate)
 {
-    const int dateDigits = 8;
+    const int START_OF_MONTH_SCOPE = 4;
     string month = "";
 
-    for (int i = 0; i < dateDigits; i++)
+    for (int i = 0; i < DATE_DIGITS; i++)
     {
-        if (i > 3 && i <= 5)
+        if (i >= START_OF_MONTH_SCOPE && i <= START_OF_MONTH_SCOPE + 1)
         {
             month += selectedDate[i];
         }
@@ -149,12 +149,11 @@ string DateManager::getMonthFromDate(string selectedDate)
 
 string DateManager::getDayFromDate(string selectedDate)
 {
-    const int dateDigits = 8;
     string day = "";
 
-    for (int i = 0; i < dateDigits; i++)
+    for (int i = 0; i < DATE_DIGITS; i++)
     {
-        if (i > 5)
+        if (i >= START_OF_DAY_SCOPE)
         {
             day += selectedDate[i];
         }
@@ -191,13 +190,54 @@ string DateManager::getUserDate()
     return year + '-' + convertDateToDoubleDigit(month) + '-' + convertDateToDoubleDigit(day);
 }
 
+int DateManager::selectDate()
+{
+    bool dateMenu = 0;
+    char choice;
+    int date = 0;
+
+    while (dateMenu == 0)
+    {
+        cout << ">> Select date <<" << endl << endl;
+        choice = selectOptionFromDateMenu();
+
+        if (choice == '1')
+        {
+            date = convertDateSeparatedDashesToInt(getCurrentDate());
+            cout << "Today's date downloaded" << endl;
+            dateMenu = 1;
+        }
+        else if (choice == '2')
+        {
+            cout << "Please, enter your date:" << endl;
+            date = convertDateSeparatedDashesToInt(getUserDate());
+            dateMenu = 1;
+        }
+        else
+        {
+            cout << endl << "Incorrect choice! Try again." << endl << endl;
+            dateMenu = 0;
+        }
+    }
+    return date;
+}
+
+char DateManager::selectOptionFromDateMenu()
+{
+    cout << "1 - Today's date" << endl;
+    cout << "2 - Other date" << endl;
+    cout << endl << "Your choice: ";
+
+    return AuxiliaryMethods::loadChar();
+}
+
 int DateManager::convertDateSeparatedDashesToInt(string dateWithDashes)
 {
     string dateWithoutDashes = "";
 
     for (int i = 0; i < dateWithDashes.length(); i++)
     {
-        if (isdigit(dateWithDashes[i]) == true)
+        if (isdigit(dateWithDashes[i]))
             dateWithoutDashes += dateWithDashes[i];
     }
     return AuxiliaryMethods::convertStringToInt(dateWithoutDashes);
@@ -205,12 +245,11 @@ int DateManager::convertDateSeparatedDashesToInt(string dateWithDashes)
 
 string DateManager::getFirstDayOfMonth(string currentDateWithDashes)
 {
-    const int dateDigits = 8;
     string currentDate = AuxiliaryMethods::convertIntToString(convertDateSeparatedDashesToInt(currentDateWithDashes));
 
-    for (int i = 0; i < dateDigits; i++)
+    for (int i = 0; i < DATE_DIGITS; i++)
     {
-        if (i == 6)
+        if (i == START_OF_DAY_SCOPE)
         {
             currentDate[i] = '0';
             currentDate[i + 1] = '1';
@@ -230,17 +269,19 @@ string DateManager::getFirstDayOfPreviousMonth()
 
 string DateManager::getPreviousMonth(int year, int month)
 {
-    string day = "01";
+    const string FIRST_DAY_MONTH = "01";
+    const int JANUARY = 1;
+    const int DECEMBER = 12;
 
-    if (month == 1)
+    if (month == JANUARY)
     {
-        month = 12;
+        month = DECEMBER;
         year--;
     }
     else
         month--;
 
-    return AuxiliaryMethods::convertIntToString(year) + convertDateToDoubleDigit(AuxiliaryMethods::convertIntToString(month)) + day;
+    return AuxiliaryMethods::convertIntToString(year) + convertDateToDoubleDigit(AuxiliaryMethods::convertIntToString(month)) + FIRST_DAY_MONTH;
 }
 
 int DateManager::getDaysSelectedMonth(string selectedDate)

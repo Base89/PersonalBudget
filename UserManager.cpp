@@ -5,38 +5,30 @@ User UserManager::getNewUserData()
     User user;
 
     user.setId(getNewUserId());
-    string login;
 
     do
     {
         cout << endl << "Enter login: ";
-        cin >> login;
-        user.setLogin(login);
+        user.setLogin(AuxiliaryMethods::loadInputData());
     }
-    while (isLoginExists(user.getLogin()) == true);
+    while (isLoginExists(user.getLogin()));
 
     string password, name, surname;
     cout << "Enter password: ";
-    cin >> password;
-    user.setPassword(password);
+    user.setPassword(AuxiliaryMethods::loadInputData());
 
     cout << "Enter name: ";
-    cin >> name;
-    user.setName(name);
+    user.setName(AuxiliaryMethods::loadInputData());
 
     cout << "Enter surname: ";
-    cin >> surname;
-    user.setSurname(surname);
+    user.setSurname(AuxiliaryMethods::loadInputData());
 
     return user;
 }
 
 int UserManager::getNewUserId()
 {
-    if (users.empty() == true)
-        return 1;
-    else
-        return users.back().getId() + 1;
+    return users.empty() ? 1 : (users.back().getId() + 1);
 }
 
 bool UserManager::isLoginExists(string login)
@@ -150,10 +142,7 @@ void UserManager::logoutUser()
 
 bool UserManager::isUserLoggedIn()
 {
-    if (loggedInUserId > 0)
-        return true;
-    else
-        return false;
+    return (loggedInUserId > 0) ? 1 : 0;
 }
 
 int UserManager::getLoggedInUserId()

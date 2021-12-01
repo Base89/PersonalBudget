@@ -36,6 +36,7 @@ public:
     void changePassword();
     void logoutUser();
     bool isUserLoggedIn();
+    void displayInfoForNotLoggingUser();
     void addIncome();
     void addExpense();
     void displayCurrentMonthBalance();

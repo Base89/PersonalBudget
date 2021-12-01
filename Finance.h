@@ -3,6 +3,8 @@
 
 #include <iostream>
 
+#include "AuxiliaryMethods.h"
+
 using namespace std;
 
 class Finance

@@ -2,8 +2,6 @@
 
 char PersonalBudget::selectOptionFromMainMenu()
 {
-    char choice;
-
     system("cls");
     cout << "    >>>  MAIN  MENU  <<<" << endl;
     cout << "----------------------------" << endl;
@@ -12,15 +10,12 @@ char PersonalBudget::selectOptionFromMainMenu()
     cout << "9. Exit" << endl;
     cout << "----------------------------" << endl;
     cout << "Your choice: ";
-    choice = AuxiliaryMethods::loadChar();
 
-    return choice;
+    return AuxiliaryMethods::loadChar();
 }
 
 char PersonalBudget::selectOptionFromUserMenu()
 {
-    char choice;
-
     system("cls");
     cout << " >>>  USER  MENU  <<<" << endl;
     cout << "----------------------" << endl;
@@ -34,9 +29,8 @@ char PersonalBudget::selectOptionFromUserMenu()
     cout << "9. Log out" << endl;
     cout << "----------------------" << endl;
     cout << "Your choice: ";
-    choice = AuxiliaryMethods::loadChar();
 
-    return choice;
+    return AuxiliaryMethods::loadChar();
 }
 
 void PersonalBudget::displayAllUsers()
@@ -70,10 +64,13 @@ void PersonalBudget::logoutUser()
 
 bool PersonalBudget::isUserLoggedIn()
 {
-    if (userManager.isUserLoggedIn() == 0)
-        return true;
-    else
-        return false;
+    return (!userManager.isUserLoggedIn()) ? true : false;
+}
+
+void PersonalBudget::displayInfoForNotLoggingUser()
+{
+    cout << "You must be logged in to perform this operation." << endl;
+    system("pause");
 }
 
 void PersonalBudget::addIncome()
@@ -82,8 +79,7 @@ void PersonalBudget::addIncome()
         budgetManager->addIncome();
     else
     {
-        cout << "You must be logged in to add income." << endl;
-        system("pause");
+        displayInfoForNotLoggingUser();
     }
 }
 
@@ -93,8 +89,7 @@ void PersonalBudget::addExpense()
         budgetManager->addExpense();
     else
     {
-        cout << "You must be logged in to add expense." << endl;
-        system("pause");
+        displayInfoForNotLoggingUser();
     }
 }
 
@@ -104,8 +99,7 @@ void PersonalBudget::displayCurrentMonthBalance()
         budgetManager->displayCurrentMonthBalance();
     else
     {
-        cout << "You must be logged in to display balance." << endl;
-        system("pause");
+        displayInfoForNotLoggingUser();
     }
 }
 
@@ -115,8 +109,7 @@ void PersonalBudget::displayPreviousMonthBalance()
         budgetManager->displayPreviousMonthBalance();
     else
     {
-        cout << "You must be logged in to display balance." << endl;
-        system("pause");
+        displayInfoForNotLoggingUser();
     }
 }
 
@@ -126,7 +119,6 @@ void PersonalBudget::displaySelectedPeriodBalance()
         budgetManager->displaySelectedPeriodBalance();
     else
     {
-        cout << "You must be logged in to display balance." << endl;
-        system("pause");
+        displayInfoForNotLoggingUser();
     }
 }

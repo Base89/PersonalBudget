@@ -16,7 +16,7 @@ Income FileWithIncomes::getIncomeData(CMarkup xml)
 
     xml.FindElem("Date");
     MCD_STR strDate = xml.GetData();
-    income.setDate(AuxiliaryMethods::convertStringToInt(strDate));
+    income.setDate(DateManager::convertDateSeparatedDashesToInt(strDate));
 
     xml.FindElem("Item");
     MCD_STR strItem = xml.GetData();
@@ -60,7 +60,7 @@ void FileWithIncomes::addIncomeToFile(Income income)
     xml.AddElem("UserId", income.getUserId());
     xml.AddElem("Date", DateManager::convertIntDateToDateWithDashes(income.getDate()));
     xml.AddElem("Item", income.getItem());
-    xml.AddElem("Amount", AuxiliaryMethods::convertDoubleToString(income.getAmount()));
+    xml.AddElem("Amount", AuxiliaryMethods::saveTwoDecimalPlaces(income.getAmount()));
 
     xml.OutOfElem();
     xml.Save(getFileName());
@@ -89,7 +89,6 @@ vector <Income> FileWithIncomes::loadIncomesOfLoggedInUserFromFile(int loggedInU
         }
     }
     lastIncomeId = getLastIncomeIdFromFile(xml);
-    cout << "Loaded incomes from file. " << endl;
 
     return incomes;
 }

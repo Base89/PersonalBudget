@@ -5,6 +5,7 @@
 #include <string>
 #include <sstream>
 #include <algorithm>
+#include <cstdlib>
 
 using namespace std;
 
@@ -16,6 +17,7 @@ public:
     static int convertStringToInt(string number);
     static double convertStringToDouble(string number);
     static string changeCommaForDot(string numberWithComma);
+    static string saveTwoDecimalPlaces(double amount);
     static string changeFirstLetterForUpperCaseAndOthersForLowerCase(string text);
     static char loadChar();
     static int loadInteger();

@@ -20,7 +20,6 @@ Income IncomeManager::getNewIncomeData()
 vector <Income> IncomeManager::sortIncomesFromEldest(vector <Income> selectedIncomes)
 {
     vector <Income> sortedIncomes;
-
     sort(incomes.begin(), incomes.end());
 
     return sortedIncomes;
@@ -34,6 +33,7 @@ double IncomeManager::sumIncomes(vector <Income> selectedIncomes)
         total += selectedIncomes[i].getAmount();
     }
     setSumSelectedIncomes(total);
+
     return total;
 }
 

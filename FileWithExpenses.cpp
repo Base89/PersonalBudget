@@ -60,7 +60,7 @@ void FileWithExpenses::addExpenseToFile(Expense expense)
     xml.AddElem("UserId", expense.getUserId());
     xml.AddElem("Date", DateManager::convertIntDateToDateWithDashes(expense.getDate()));
     xml.AddElem("Item", expense.getItem());
-    xml.AddElem("Amount", AuxiliaryMethods::convertDoubleToString(expense.getAmount()));
+    xml.AddElem("Amount", AuxiliaryMethods::saveTwoDecimalPlaces(expense.getAmount()));
 
     xml.OutOfElem();
     xml.Save(getFileName());
@@ -89,7 +89,6 @@ vector <Expense> FileWithExpenses::loadExpensesOfLoggedInUserFromFile(int logged
         }
     }
     lastExpenseId = getLastExpenseIdFromFile(xml);
-    cout << "Loaded expenses from file. " << endl;
 
     return expenses;
 }

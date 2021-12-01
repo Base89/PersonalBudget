@@ -2,38 +2,22 @@
 
 string AuxiliaryMethods::convertIntToString(int number)
 {
-    ostringstream oss;
-    oss << number;
-    string strNumber = oss.str();
-
-    return strNumber;
+    return to_string(number);
 }
 
 string AuxiliaryMethods::convertDoubleToString(double number)
 {
-    ostringstream oss;
-    oss << number;
-    string strNumber = oss.str();
-
-    return strNumber;
+    return to_string(number);
 }
 
 int AuxiliaryMethods::convertStringToInt(string number)
 {
-    int intNumber = 0;
-    istringstream iss(number);
-    iss >> intNumber;
-
-    return intNumber;
+    return atoi(number.c_str());
 }
 
 double AuxiliaryMethods::convertStringToDouble(string number)
 {
-    double doubleNumber = 0;
-    istringstream iss(number);
-    iss >> doubleNumber;
-
-    return doubleNumber;
+    return atof(number.c_str());
 }
 
 string AuxiliaryMethods::changeCommaForDot(string numberWithComma)
@@ -52,6 +36,28 @@ string AuxiliaryMethods::changeCommaForDot(string numberWithComma)
         return numberWithComma;
 
     return numberWithDot;
+}
+
+string AuxiliaryMethods::saveTwoDecimalPlaces(double amount)
+{
+    const string COMMA = ",";
+    const string DOT = ".";
+    const string TWO_DECIMAL_PLACES = ".00";
+    string strAmount = convertDoubleToString(amount);
+    int position = 0;
+
+    position = strAmount.find(COMMA);
+    if (position == string::npos)
+    {
+        position = 0;
+        position = strAmount.find(DOT);
+        if (position != string::npos)
+            return strAmount.substr (0, position + 3);
+        else
+            return strAmount += TWO_DECIMAL_PLACES;
+    }
+    else
+        return strAmount.substr (0, position + 3);
 }
 
 string AuxiliaryMethods::changeFirstLetterForUpperCaseAndOthersForLowerCase(string text)
